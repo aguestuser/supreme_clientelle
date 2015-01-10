@@ -28,15 +28,15 @@ object BCodr {
     case n :: tail if n.toChar.isDigit => decodeStr(rem)
     case 'l' :: tail =>  val (l, rest) = decodeList(tail); (BList(l), rest)
     case 'd' :: tail => val (l, rest) = decodeMap(tail); (BMap(l), rest)
-    case _ => case _ => throw new IllegalArgumentException(
+    case _ => throw new IllegalArgumentException(
       "Looks like you didn't encode something according to spec... Don't worry!" +
         "Here's the spec: https://wiki.theory.org/BitTorrentSpecification#Lists"
     )
   }
 
   def decodeInt(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
-    val (intBytes, _ :: newTail) = bytes.span(_.toChar != 'e')
-    (BInt(bytesToStr(intBytes).toInt), newTail)
+    val (intBytes, _ :: tail) = bytes.span(_.toChar != 'e')
+    (BInt(bytesToStr(intBytes).toInt), tail)
   }
 
   def decodeStr(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
@@ -48,19 +48,20 @@ object BCodr {
   def decodeList(bytes: List[Byte]) : (List[BDecoding], List[Byte]) = bytes match {
     case 'e' :: tail => (List[BDecoding](), tail)
     case _ =>
-      val (result, tail) = decodeOne(bytes)
-      val (results, newTail) = decodeList(tail)
-      (result :: results, newTail)
+      val (item, tail) = decodeOne(bytes)
+      val (list, newTail) = decodeList(tail)
+      (item :: list, newTail)
   }
 
   def decodeMap(bytes: List[Byte]) : (Map[String, BDecoding], List[Byte]) = bytes match {
     case 'e' :: tail => (Map[String, BDecoding](), tail)
     case _ =>
-      val (key: BStr, rest) = decodeOne(bytes)
-      val (value: BDecoding, newRest) = decodeOne(rest)
-      val (map, tail) = decodeMap(newRest)
-      val k = (key.is, value)
-      (map + k, tail)
+      val (key: BStr, tail) = decodeOne(bytes)
+      val (value: BDecoding, newTail) = decodeOne(tail)
+      val (map, newestTail) = decodeMap(newTail)
+      (map + Tuple2(key.is, value), newestTail)
+//      val k = (key.is, value)
+//      (map + k, newestTail)
   }
 
   // utility
