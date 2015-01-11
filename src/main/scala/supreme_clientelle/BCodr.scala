@@ -30,7 +30,7 @@ object BCodr {
     case 'd' :: tail => val (l, rest) = decodeMap(tail); (BMap(l), rest)
     case _ => throw new IllegalArgumentException(
       "Looks like you didn't encode something according to spec... Don't worry!" +
-        "Here's the spec: https://wiki.theory.org/BitTorrentSpecification#Lists") }
+        "Here's the spec: https://wiki.theory.org/BitTorrentSpecification#Bencoding") }
 
   private def decodeInt(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
     val (intBytes, _ :: tail) = bytes.span(_.toChar != 'e')

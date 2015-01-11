@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b2a054-639e-42ae-94b2-470ca1543d28" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/BCodr$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/BCodr$Test.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/sample_data/flagfromserver.torrent" afterPath="$PROJECT_DIR$/src/test/sample_data/flagfromserver.torrent" />
     </list>
     <ignored path="supreme_clientelle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +35,8 @@
           <file leaf-file-name="BCodr.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.3493253" vertical-offset="0" max-vertical-offset="1245">
-                  <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+                <state vertical-scroll-proportion="0.6971514" vertical-offset="15" max-vertical-offset="1245">
+                  <caret line="32" column="83" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
                   <folding />
                 </state>
               </provider>
@@ -75,8 +73,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/Bencoder$Test.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/Bcoder.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BcoderOld.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/BCodr$Test.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala" />
       </list>
     </option>
   </component>
@@ -627,14 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3493253" vertical-offset="0" max-vertical-offset="1245">
-          <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/BCodr$Test.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6971514" vertical-offset="195" max-vertical-offset="900">
@@ -642,6 +632,14 @@
           <folding>
             <element signature="e#28#67#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6971514" vertical-offset="15" max-vertical-offset="1245">
+          <caret line="32" column="83" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
