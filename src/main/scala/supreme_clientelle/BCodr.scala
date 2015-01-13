@@ -120,6 +120,16 @@ object BCodr {
 
 // question: how to read a file to a byte array?
 
+// question: how to sha-1 encode a byte array
+
+/*answer:
+* import java.security.MessageDigest
+* val md = MessageDigest.getInstance("SHA-1")
+* val byteArr = md.digest(ba)
+* //or
+* val byteStr = ByteString(md.digest(ba))
+* */
+
 // answer:
 //import java.nio.file.{Files, Paths}
 //val byteList = Files.readAllBytes(Paths.get("/Users/aguestuser/code/hackerschool/supreme_clientelle/src/test/sample_data/flagfromserver.torrent")).toList
