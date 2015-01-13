@@ -4,7 +4,7 @@
 		module="supreme_clientelle$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150107140031"
+		publication="20150113003933"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

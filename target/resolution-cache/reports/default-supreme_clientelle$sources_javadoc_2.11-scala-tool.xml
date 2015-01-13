@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="scala-tool"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150107140032"/>
+		date="20150113003935"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-compiler">
 			<revision name="2.11.4" status="release" pubdate="20141023113523" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="4">
@@ -81,7 +81,7 @@
 				<metadata-artifact status="no" details="" size="2785" time="0" location="/Users/aguestuser/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/ivy-1.0.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.2/scala-parser-combinators_2.11-1.0.2.pom"/>
 				<caller organisation="default" name="supreme_clientelle$sources_javadoc_2.11" conf="scala-tool" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="scala-parser-combinators_2.11" type="jar" ext="jar" status="successful" details="" size="416065" time="307" location="/Users/aguestuser/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/jars/scala-parser-combinators_2.11-1.0.2.jar">
+					<artifact name="scala-parser-combinators_2.11" type="jar" ext="jar" status="no" details="" size="416065" time="0" location="/Users/aguestuser/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/jars/scala-parser-combinators_2.11-1.0.2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.2/scala-parser-combinators_2.11-1.0.2.jar"/>
 					</artifact>
 					<artifact name="scala-parser-combinators_2.11" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="694259" time="0" location="/Users/aguestuser/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/docs/scala-parser-combinators_2.11-1.0.2-javadoc.jar">

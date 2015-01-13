@@ -7,8 +7,44 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150107140032"/>
+		date="20150113003935"/>
 	<dependencies>
+		<module organisation="com.typesafe.akka" name="akka-actor_2.11">
+			<revision name="2.4-SNAPSHOT" status="integration" pubdate="20150112171002" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2665" time="0" location="/Users/aguestuser/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/ivy-2.4-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-actor_2.11/2.4-SNAPSHOT/akka-actor_2.11-2.4-SNAPSHOT.pom"/>
+				<caller organisation="default" name="supreme_clientelle$sources_javadoc_2.11" conf="optional, compile, provided, compile-internal" rev="2.4-SNAPSHOT" rev-constraint-default="2.4-SNAPSHOT" rev-constraint-dynamic="2.4-SNAPSHOT" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="akka-actor_2.11" type="jar" ext="jar" status="no" details="" size="2610972" time="0" location="/Users/aguestuser/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4-SNAPSHOT.jar">
+						<origin-location is-local="false" location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-actor_2.11/2.4-SNAPSHOT/akka-actor_2.11-2.4-SNAPSHOT.jar"/>
+					</artifact>
+					<artifact name="akka-actor_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="341847" time="999" location="/Users/aguestuser/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/srcs/akka-actor_2.11-2.4-SNAPSHOT-sources.jar">
+						<origin-location is-local="false" location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-actor_2.11/2.4-SNAPSHOT/akka-actor_2.11-2.4-SNAPSHOT-sources.jar"/>
+					</artifact>
+					<artifact name="akka-actor_2.11" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="3808577" time="1301" location="/Users/aguestuser/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/docs/akka-actor_2.11-2.4-SNAPSHOT-javadoc.jar">
+						<origin-location is-local="false" location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-actor_2.11/2.4-SNAPSHOT/akka-actor_2.11-2.4-SNAPSHOT-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.2.1" status="release" pubdate="20140502105416" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="2">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2734" time="0" location="/Users/aguestuser/.ivy2/cache/com.typesafe/config/ivy-1.2.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.pom"/>
+				<caller organisation="default" name="supreme_clientelle$sources_javadoc_2.11" conf="optional, compile, provided, compile-internal" rev="1.2.1" rev-constraint-default="1.2.1" rev-constraint-dynamic="1.2.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="config" type="jar" ext="jar" status="successful" details="" size="219554" time="332" location="/Users/aguestuser/.ivy2/cache/com.typesafe/config/jars/config-1.2.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.jar"/>
+					</artifact>
+					<artifact name="config" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="147508" time="388" location="/Users/aguestuser/.ivy2/cache/com.typesafe/config/docs/config-1.2.1-javadoc.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1-javadoc.jar"/>
+					</artifact>
+					<artifact name="config" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="132611" time="297" location="/Users/aguestuser/.ivy2/cache/com.typesafe/config/srcs/config-1.2.1-sources.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-lang" name="scala-library">
 			<revision name="2.11.4" status="release" pubdate="20141023113451" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.4/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
