@@ -2,90 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b2a054-639e-42ae-94b2-470ca1543d28" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/BDecoding$Test.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BDecoding.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/Main.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/TrakrTalkr.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/Util.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$$anonfun$bytesToStr$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$$anonfun$strToBytes$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$24.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$23.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$26$$anonfun$apply$27.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$26$$anonfun$apply$28.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$26.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$29$$anonfun$apply$30.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$29$$anonfun$apply$31.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$29.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$32$$anonfun$apply$33$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$32$$anonfun$apply$33$$anonfun$apply$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$32$$anonfun$apply$33.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$32.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$34$$anonfun$apply$35$$anonfun$apply$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$34$$anonfun$apply$35$$anonfun$apply$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$34$$anonfun$apply$35.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22$$anonfun$apply$34.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$22.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$37$$anonfun$apply$38.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$37$$anonfun$apply$39.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$37.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$40$$anonfun$apply$41.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$40$$anonfun$apply$42.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$40.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$43$$anonfun$apply$44.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$43$$anonfun$apply$45.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36$$anonfun$apply$43.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$36.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$47$$anonfun$apply$48.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$47$$anonfun$apply$49.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$47.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$50$$anonfun$apply$51.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$50$$anonfun$apply$52.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$50.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$53$$anonfun$apply$54.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$53$$anonfun$apply$55.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$53.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$56$$anonfun$apply$57.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$56$$anonfun$apply$58.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46$$anonfun$apply$56.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$46.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$10$$anonfun$apply$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$10$$anonfun$apply$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$13$$anonfun$apply$14.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$13$$anonfun$apply$15.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$16$$anonfun$apply$17.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$16$$anonfun$apply$18.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$16.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$19$$anonfun$apply$20.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$19$$anonfun$apply$21.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9$$anonfun$apply$19.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1$$anonfun$apply$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$59$$anonfun$apply$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$59.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$60$$anonfun$apply$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$60.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$61$$anonfun$apply$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$61.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$62$$anonfun$apply$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2$$anonfun$apply$62.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/supreme_clientelle/BCodr$Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BCodr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BDecoding$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BDecoding$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BDecoding.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BDecoding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BStr$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BStr$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BStr.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/supreme_clientelle/BStr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/BCodr$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/BCodr$Test.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/specs2-reports/stats/Test.stats" afterPath="$PROJECT_DIR$/target/specs2-reports/stats/Test.stats" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="supreme_clientelle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,8 +35,8 @@
           <file leaf-file-name="BCodr.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.65909094" vertical-offset="223" max-vertical-offset="1890">
-                  <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+                <state vertical-scroll-proportion="0.65909094" vertical-offset="388" max-vertical-offset="1020">
+                  <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -1098,8 +1015,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/BCodr.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65909094" vertical-offset="223" max-vertical-offset="1890">
-          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.65909094" vertical-offset="388" max-vertical-offset="1020">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
           <folding />
         </state>
       </provider>

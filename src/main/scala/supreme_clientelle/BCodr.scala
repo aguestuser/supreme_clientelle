@@ -44,78 +44,19 @@ object BCodr extends Util {
 
 }
 
-//object BDecoding {
-//  def popBStr(d: BDecoding) : String = d match {
-//    case BStr(s) => s
-//    case _ => throw new Exception ("tried to retrieve a String from a non BStr BDecoding")
-//  }
-//  def popBInt(d: BDecoding) : Int = d match {
-//    case BInt(i) => i
-//    case _ => throw new Exception ("tried to retrieve an Int from a non BInt BDecoding")
-//  }
-//  def popBList(d: BDecoding) : List[BDecoding] = d match {
-//    case BList(l) => l
-//    case _ => throw new Exception ("tried to retrieve a List from a non BList BDecoding")
-//  }
-//  def popBMap(d: BDecoding) : ListMap[BStr, BDecoding] = d match {
-//    case BMap(m) => m
-//    case _ => throw new Exception ("tried to retrieve a Map from a non BMap BDecoding")
-//  }
-//}
-
-//class RetreiveStuff {
-//  def getPieces(map: BMap): List[Byte] = {
-//    map.is(BStr("info")) match {
-//      case BMap(m2) =>
-//        m2(BStr("pieces")) match {
-//          case BStr(s) => BCodr.strToBytes(s)
-//          case _ => throw new Exception("Whoops!")
-//        }
-//      case _ => throw new Exception("Whoops!")
-//    }
-//  }
-// }
-
-//  def getBDecoding(map: BMap, paths: List[BStr]) : BDecoding = {
-//    paths match {
-//      case Nil => // return a BDecoding!
-//      case path :: tail => // keep looking for BDecodings!
-//    }
-//  }
-
-// question: what is the idiomatic way to handle bytes in Scala?
-
-/* answer:
-* List[Byte] is the idiomatic way to handle bytes
-* ie:
-* someStr.getBytes => List[Byte])
-* akka.util.ByteString(List[Byte]) => ByteString
-* */
-
-// question: how to destructure a bytestring?
-
-/* answer, either:
-* 'e'.toByte +: tail
-* or
-* ByteString('e') ++: tail
-* */
-
-// question: how to read a file to a byte array?
-
-// question: how to sha-1 encode a byte array
+// question: how to sha-1 encode a byte array?
 
 /*answer:
 * import java.security.MessageDigest
+* val ba = someByteList.toArray
 * val md = MessageDigest.getInstance("SHA-1")
-* val byteArr = md.digest(ba)
-* //or
-* val byteStr = ByteString(md.digest(ba))
+* val bhash:List[Byte] = md.digest(ba).toList
 * */
 
-// answer:
-//import java.nio.file.{Files, Paths}
-//val byteList = Files.readAllBytes(Paths.get("/Users/aguestuser/code/hackerschool/supreme_clientelle/src/test/sample_data/flagfromserver.torrent")).toList
-//val d = decodeToBMap(byteList)
-//val pieces = popBMap(popBMap(d)(BStr("info")))(BStr("pieces"))
+// question: how to read a file into a byte array?
 
-// question: does scala accomodate unsigned bytes?
+/* answer:
+* import java.nio.file.{Files, Paths}
+* val byteList = Files.readAllBytes(Paths.get("path/to/file")).toList
+* */
+
