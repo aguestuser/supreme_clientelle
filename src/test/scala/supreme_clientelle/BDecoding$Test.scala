@@ -1,9 +1,9 @@
 package supreme_clientelle
 
 import org.specs2.mutable.Specification
-import scala.collection.immutable.ListMap
 import supreme_clientelle.BDecoding._
 
+import scala.collection.immutable.ListMap
 import scala.util.Success
 
 /**
@@ -15,11 +15,17 @@ class BDecoding$Test extends Specification {
 
     "#BStrify" should {
       "compose a BStr from a String" in {
-        BStrify("hello") === BStr("hello".getBytes.toList) } }
+        BStrify("hello") === BStr(List[Byte](104, 101, 108, 108, 111)) } }
 
     "#strify" should {
       "unpack a String from a BStr" in {
-        strify(BStr("hello".getBytes.toList)) === "hello" } }
+        strify(BStr(List[Byte](104, 101, 108, 108, 111))) === "hello" } }
+
+    "#toByteArray" should {
+      "cast a BStr to an Array[Byte]" in {
+        toByteArray(BStrify("hello")) === Success(Array[Byte](104, 101, 108, 108, 111))
+      }
+    }
 
     "#uNnest" should {
 
@@ -82,6 +88,16 @@ class BDecoding$Test extends Specification {
         "for a BStr in a BMap in a BList" in {
           unNest(blm, List(Right(1),Left(BStrify("two")))) === Success(BStrify("three")) } }
 
+      "handle errors" in {
+
+        "with incorrect Types" in {
+
+          "when passed a BInt" in {
+            unNest(BStrify("hello"), List(Right(0))) must
+              beFailedTry.withThrowable[Exception]("""\QBDecoding#unNest expects a BMap or BList but received the following BStr: BStr(List(104, 101, 108, 108, 111))\E""")
+          }
+        }
+      }
     }
   }
 }
