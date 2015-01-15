@@ -16,7 +16,7 @@ object BDecoding {
 
   type BKey = Either[BStr, Int]
 
-  def bStrify(str: String): BStr = BStr(str.getBytes.toList)
+  def BStrify(str: String): BStr = BStr(str.getBytes.toList)
   def strify(bs: BStr): String = bs.is.map(_.toChar).mkString
 
   def unNest(b: BDecoding, keys: List[BKey]): Try[BDecoding] = b match {

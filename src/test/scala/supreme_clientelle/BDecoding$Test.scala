@@ -15,7 +15,7 @@ class BDecoding$Test extends Specification {
 
     "#BStrify" should {
       "compose a BStr from a String" in {
-        bStrify("hello") === BStr("hello".getBytes.toList) } }
+        BStrify("hello") === BStr("hello".getBytes.toList) } }
 
     "#strify" should {
       "unpack a String from a BStr" in {
@@ -24,44 +24,44 @@ class BDecoding$Test extends Specification {
     "#uNnest" should {
 
       lazy val bm = BMap(ListMap(
-        bStrify("spams") -> BInt(2),
-        bStrify("eggs") -> bStrify("no!"),
-        bStrify("meal counts") -> BList(List(BInt(1),BInt(2))),
-        bStrify("breakfast map") -> BMap(ListMap(
-          bStrify("spams") -> BInt(2),
-          bStrify("dinner map") -> BMap(ListMap(
-            bStrify("eggs") -> bStrify("eat your veggies!")))))))
+        BStrify("spams") -> BInt(2),
+        BStrify("eggs") -> BStrify("no!"),
+        BStrify("meal counts") -> BList(List(BInt(1),BInt(2))),
+        BStrify("breakfast map") -> BMap(ListMap(
+          BStrify("spams") -> BInt(2),
+          BStrify("dinner map") -> BMap(ListMap(
+            BStrify("eggs") -> BStrify("eat your veggies!")))))))
 
       "unnest BDecodings from a BMap" in {
 
         "for a BInt" in {
-          unNest(bm, List(Left(bStrify("spams")))) === Success(BInt(2)) }
+          unNest(bm, List(Left(BStrify("spams")))) === Success(BInt(2)) }
 
         "for a BStr" in {
-          unNest(bm, List(Left(bStrify("eggs")))) === Success(bStrify("no!")) }
+          unNest(bm, List(Left(BStrify("eggs")))) === Success(BStrify("no!")) }
 
         "for a BList" in {
-          unNest(bm, List(Left(bStrify("meal counts")))) ===
+          unNest(bm, List(Left(BStrify("meal counts")))) ===
             Success(BList(List(BInt(1), BInt(2)))) }
 
         "for a nested BInt" in {
           unNest(bm, List(
-            Left(bStrify("breakfast map")),
-            Left(bStrify("spams")))) === Success(BInt(2)) }
+            Left(BStrify("breakfast map")),
+            Left(BStrify("spams")))) === Success(BInt(2)) }
 
         "for a doubly-nested BStr" in {
           unNest(bm, List(
-            Left(bStrify("breakfast map")),
-            Left(bStrify("dinner map")),
-            Left(bStrify("eggs")))) === Success(bStrify("eat your veggies!")) } } // returning "no!"
+            Left(BStrify("breakfast map")),
+            Left(BStrify("dinner map")),
+            Left(BStrify("eggs")))) === Success(BStrify("eat your veggies!")) } } // returning "no!"
 
 
       "un-nest BDecodings from a BList" in {
 
-        lazy val bl = BList(List(bStrify("one"), BList(List(BInt(2), BInt(3)))))
+        lazy val bl = BList(List(BStrify("one"), BList(List(BInt(2), BInt(3)))))
 
         "for a BInt" in {
-          unNest(bl, List(Right(0))) === Success(bStrify("one")) }
+          unNest(bl, List(Right(0))) === Success(BStrify("one")) }
 
         "for a nested BStr" in {
           unNest(bl, List(Right(1),Right(0))) === Success(BInt(2)) } }
@@ -69,18 +69,18 @@ class BDecoding$Test extends Specification {
       "un-nest BDecodings for BMaps inside of BLists & vice versa" in {
 
         lazy val bml = BMap(ListMap(
-          bStrify("one") ->
+          BStrify("one") ->
             BList(List(BInt(2),BInt(3)))))
 
         lazy val blm = BList(List(
-          bStrify("one"),
-          BMap(ListMap(bStrify("two") -> bStrify("three")))))
+          BStrify("one"),
+          BMap(ListMap(BStrify("two") -> BStrify("three")))))
 
         "for a BInt in a BList in a BMap" in {
-          unNest(bml, List(Left(bStrify("one")),Right(0))) === Success(BInt(2)) }
+          unNest(bml, List(Left(BStrify("one")),Right(0))) === Success(BInt(2)) }
 
         "for a BStr in a BMap in a BList" in {
-          unNest(blm, List(Right(1),Left(bStrify("two")))) === Success(bStrify("three")) } }
+          unNest(blm, List(Right(1),Left(BStrify("two")))) === Success(BStrify("three")) } }
 
     }
   }
