@@ -2,12 +2,14 @@ package supreme_clientelle
 
 import org.specs2.mutable.Specification
 import supreme_clientelle.BCodr._
+
 import scala.collection.immutable.ListMap
 
 /**
  * Created by aguestuser on 1/9/15.
  */
-class BCodr$Test extends Specification {
+
+class BCodr$Test extends Specification with Util {
   
   "BCodr.decode" should {
 
@@ -21,26 +23,36 @@ class BCodr$Test extends Specification {
 
     "correctly decode STRINGS" in {
 
-      "simple string" in { decode("3:foo") === BStr("foo")}
-      "string with spaces" in { decode("20:austin spencer guest") === BStr("austin spencer guest")}
-      "string with every numerical digit" in { decode("10:1234567890") === BStr("1234567890")}
-      "string with special characters" in pending{ true === true}
-      "string with raw bytes" in pending{ true === true }
+      "simple string" in {
+        decode("3:foo") === BStr("foo".getBytes.toList)
+      }
+      "string with spaces" in {
+        ( decode("20:austin spencer guest") match { case BStr(s) => BStr(s).is } ) ===
+          BStr("austin spencer guest".getBytes.toList)
+      }
+      "string with every numerical digit" in {
+        ( decode("10:1234567890") match { case BStr(s) => BStr(s).is } )  ===
+          BStr("1234567890".getBytes.toList)
+      }
+      "string of non-character bytes" in {
+        ( decode(List[Byte](53, 58, -35, -82, -8, -119, -111)) match { case BStr(s) => BStr(s).is } ) ===
+          BStr(List[Byte](-35, -82, -8, -119, -111)).is
+      }
     }
 
     "correctly decode LISTS" in {
 
       "simple list" in {
-        decode("li2e4:spam3:egge") === 
-          BList(List(BInt(2), BStr("spam"), BStr("egg")))
+        ( decode("li2e4:spam3:egge") match { case BList(l) => BList(l).is } ) ===
+          BList(List(BInt(2), BStr("spam".getBytes.toList), BStr("egg".getBytes.toList)))
       }
       "nested list" in {
-        decode("li2e4:spam3:eggli2e4:spam3:eggee") === 
-          BList(List(BInt(2), BStr("spam"), BStr("egg"),
-            BList(List(BInt(2), BStr("spam"), BStr("egg")))))
+        ( decode("li2e4:spam3:eggli2e4:spam3:eggee") match { case BList(l) => BList(l).is } ) ===
+          BList(List(BInt(2), BStr("spam".getBytes.toList), BStr("egg".getBytes.toList),
+            BList(List(BInt(2), BStr("spam".getBytes.toList), BStr("egg".getBytes.toList)))))
       }
       "empty list" in {
-        decode("le") === 
+        ( decode("le") match { case BList(l) => BList(l).is } ) ===
           BList(List[BDecoding]())
       }
     }
@@ -48,31 +60,33 @@ class BCodr$Test extends Specification {
     "correctly decode MAPS" in {
 
       "simple map" in {
-        decode("d3:cow3:moo4:spam4:eggs3:numi3ee") ===
+        ( decode("d3:cow3:moo4:spam4:eggs3:numi3ee") match { case BMap(m) => BMap(m).is } ) ===
           BMap(ListMap(
-            BStr("cow") -> BStr("moo"),
-            BStr("spam") -> BStr("eggs"),
-            BStr("num") -> BInt(3)
-          ))
+            BStr("cow".getBytes.toList) -> BStr("moo".getBytes.toList),
+            BStr("spam".getBytes.toList) -> BStr("eggs".getBytes.toList),
+            BStr("num".getBytes.toList) -> BInt(3)
+          )).is
       }
       "map with nested list" in {
-        decode("d4:spaml1:a1:bee") ===
+        ( decode("d4:spaml1:a1:bee") match { case BMap(m) => BMap(m).is } ) ===
           BMap(ListMap(
-            BStr("spam") -> BList(List(
-              BStr("a"), BStr("b")))))
+            BStr("spam".getBytes.toList) -> BList(List(
+              BStr("a".getBytes.toList), BStr("b".getBytes.toList))))).is
       }
       "map with nested map" in {
-        decode("d9:publisher3:bob17:publisher-detailsd17:publisher-webpage15:www.example.com18:publisher.location4:home5:isbnsli1ei2ei3eeeee") ===
+        ( decode("d9:publisher3:bob17:publisher-details" +
+          "d17:publisher-webpage15:www.example.com18:publisher.location4:home5:isbns" +
+          "li1ei2ei3eeeee") match { case BMap(m) => BMap(m).is } ) ===
           BMap(ListMap(
-            BStr("publisher") -> BStr("bob"),
-            BStr("publisher-details") -> BMap(ListMap(
-              BStr("publisher-webpage") -> BStr("www.example.com"),
-              BStr("publisher.location") -> BStr("home"),
-              BStr("isbns") -> BList(List(BInt(1), BInt(2), BInt(3)))
-            ))))
+            BStr("publisher".getBytes.toList) -> BStr("bob".getBytes.toList),
+            BStr("publisher-details".getBytes.toList) -> BMap(ListMap(
+              BStr("publisher-webpage".getBytes.toList) -> BStr("www.example.com".getBytes.toList),
+              BStr("publisher.location".getBytes.toList) -> BStr("home".getBytes.toList),
+              BStr("isbns".getBytes.toList) -> BList(List(BInt(1), BInt(2), BInt(3)))
+            )))).is
       }
       "empty map" in {
-        decode("de") ===
+        ( decode("de") match { case BList(l) => BList(l).is } ) ===
           BMap(ListMap[BStr,BDecoding]())
       }
     }

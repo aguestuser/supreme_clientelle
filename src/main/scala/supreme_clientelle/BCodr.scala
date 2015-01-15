@@ -6,24 +6,10 @@ import scala.collection.immutable.ListMap
  * Created by aguestuser on 1/8/15.
  */
 
-sealed abstract class BDecoding
-case class BStr(is: String) extends BDecoding
-case class BInt(is: Int) extends BDecoding
-case class BList(is: List[BDecoding]) extends BDecoding
-case class BMap(is: ListMap[BStr, BDecoding]) extends BDecoding
+object BCodr extends Util {
 
-
-object BCodr {
-
-  def decode(str: String) : BDecoding = decode(strToBytes(str))
+  def decode(str: String) : BDecoding = decode(str.getBytes.toList)
   def decode(bytes: List[Byte]) : BDecoding = decodeOne(bytes)._1
-  def decodeToBMap(bytes: List[Byte]) : BMap = {
-    val res = decodeOne(bytes)._1
-    res match {
-      case BMap(map) => BMap(map)
-      case _ => throw new Exception("You tried to return a non-BMap to a function expecting a BMap")
-    }
-  }
 
   private def decodeOne(rem: List[Byte]) : (BDecoding, List[Byte]) = rem match {
     case 'i' :: tail => decodeInt(tail)
@@ -39,7 +25,7 @@ object BCodr {
   private def decodeStr(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
     val (len, _ :: tail) = bytes.span(_.toChar != ':')
     val (strBytes, newTail) = tail.splitAt(bytesToStr(len).toInt)
-    (BStr(bytesToStr(strBytes)), newTail) }
+    (BStr(strBytes), newTail) }
 
   private def decodeList(bytes: List[Byte]) : (List[BDecoding], List[Byte]) = bytes match {
     case 'e' :: tail => (List[BDecoding](), tail)
@@ -56,10 +42,6 @@ object BCodr {
       val (map, newestTail) = decodeMap(newTail)
       (ListMap(Tuple2(key, value)) ++ map, newestTail) }
 
-  // utility
-//  def strToBytes(str: String) : List[Byte] = str.toList.map(_.toByte)
-  def strToBytes(str: String) : List[Byte] = str.getBytes.toList
-  def bytesToStr(bytes: List[Byte]) : String = bytes.map(_.toChar).mkString
 }
 
 //object BDecoding {
@@ -104,10 +86,10 @@ object BCodr {
 // question: what is the idiomatic way to handle bytes in Scala?
 
 /* answer:
-* Array[Byte] is the idiomatic way to handle bytes
+* List[Byte] is the idiomatic way to handle bytes
 * ie:
-* someStr.getBytes => Array[Byte])
-* akka.util.ByteString(Array[Byte]) => ByteString
+* someStr.getBytes => List[Byte])
+* akka.util.ByteString(List[Byte]) => ByteString
 * */
 
 // question: how to destructure a bytestring?
@@ -135,3 +117,5 @@ object BCodr {
 //val byteList = Files.readAllBytes(Paths.get("/Users/aguestuser/code/hackerschool/supreme_clientelle/src/test/sample_data/flagfromserver.torrent")).toList
 //val d = decodeToBMap(byteList)
 //val pieces = popBMap(popBMap(d)(BStr("info")))(BStr("pieces"))
+
+// question: does scala accomodate unsigned bytes?
