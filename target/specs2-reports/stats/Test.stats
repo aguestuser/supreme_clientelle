@@ -506,3 +506,31 @@
 <Test-stats timestamp="1421347870082"><stats time="28" expectations="1" successes="1" examples="1"></stats></Test-stats>
 <Test-stats timestamp="1421347927571"><stats time="34" expectations="1" successes="1" examples="1"></stats></Test-stats>
 <Test-stats timestamp="1421347991232"><stats time="20" expectations="1" successes="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1421364944165"><stats time="6"><trend><stats time="6" expectations="-1" successes="-1" examples="-1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421364953174"><stats time="19" expectations="1" successes="1" examples="1"><trend><stats time="19" successes="1" examples="1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421366374600"><result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:108)" id="-272991004"><stats time="49" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421366374672"><stats time="18" expectations="1" failures="1" examples="1"><trend><stats time="18" failures="1" successes="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421366425374"><result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:108)" id="-272991004"><stats time="43" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421366425446"><stats time="33" expectations="1" failures="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1421366595723"><stats time="23" expectations="1" successes="1" examples="1"><trend><stats time="23" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421366794495"><stats time="30" expectations="1" successes="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1421366902335"><stats time="6"><trend><stats time="6" expectations="-1" successes="-1" examples="-1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421366951448"><stats time="5"><trend><stats time="5" expectations="-1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421366962987"><stats time="7"><trend><stats time="7" expectations="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421366980677"><result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:21)" id="-1141352446"><stats time="20" expectations="1" failures="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:89)" id="903950326"><stats time="16" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421366980758"><stats time="41" expectations="14" failures="2" successes="12" examples="14"><trend><stats time="41" expectations="13" failures="2" successes="12" examples="14"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421367008059"><stats time="5"><trend><stats time="5" expectations="-14" failures="-2" successes="-12" examples="-14"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421367090505"><stats time="4"><trend><stats time="4" expectations="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421367104677"><result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:21)" id="-1141352446"><stats time="25" expectations="1" failures="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:89)" id="903950326"><stats time="11" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421367104760"><stats time="28" expectations="14" failures="2" successes="12" examples="14"><trend><stats time="28" expectations="13" failures="2" successes="12" examples="14"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421367112887"><result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:21)" id="-1141352446"><stats time="9" expectations="1" failures="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BDecoding (BDecoding$Test.scala:89)" id="903950326"><stats time="22" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421367112958"><stats time="55" expectations="14" failures="2" successes="12" examples="14"></stats></Test-stats>
+<Test-stats timestamp="1421367187503"><stats time="15" expectations="2" successes="2" examples="2"><trend><stats time="15" expectations="-12" failures="-2" successes="-10" examples="-12"></stats></trend></stats></Test-stats>
