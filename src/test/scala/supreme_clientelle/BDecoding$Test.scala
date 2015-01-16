@@ -149,7 +149,7 @@ class BDecoding$Test extends Specification {
 
 
       "lookup strings with nice syntax" in {
-        LookerUpper.find("breakfast map")("dinner map")("eggs").in(bm)(stringify) === "eat your veggies!"
+        StartLooking.find("breakfast map")("dinner map")("eggs").in(bm)(stringify) === "eat your veggies!"
       }
 
     }

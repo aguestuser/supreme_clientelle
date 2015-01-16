@@ -76,26 +76,26 @@ object BDecoding extends BKey {
   // OO WAY TO DO LOOKUP
   // question: how to make this work for BMaps that branch to BLists (and take Ints as keys?)
 
-  abstract class BMapIndexer {
-    def apply(key: String): BMapIndexer = new BStringMapIndexer(key, this)
+  abstract class LookerUpper {
+    def apply(key: String): LookerUpper = new LookerUpper(key, this)
     def run(b: BDecoding): Try[BDecoding] // abstract
     def listify: List[BKey] // abstract
 
     def in(b: BDecoding) = (transformer: BDecoding => Try[String]) => transformer(run(b).get).get
   }
 
-  class BStringMapIndexer(private val key: String, private val previous: BMapIndexer) extends BMapIndexer {
+  class KeepLooking(private val key: String, private val previous: KeepLooking) extends LookerUpper {
     def run(b: BDecoding): Try[BDecoding] = lookup(b, listify)
     def listify: List[BKey] = previous.listify :+ Bmk(key)
   }
 
-  class LookerUpper extends BMapIndexer {
+  class StartLooking extends LookerUpper {
     def run(b: BDecoding) = Success(b) // base case
     def listify = List()
   }
 
-  object LookerUpper { // call to initialize lookup
-    def find(key: String) = new LookerUpper()(key) // first () calls apply
+  object StartLooking { // call to initialize lookup
+    def find(key: String) = new StartLooking()(key) // first () calls apply
   }
 
   // usage: BstringEmpty.find("a key")(1)("another key").in(SomeBMap)(stringify)
