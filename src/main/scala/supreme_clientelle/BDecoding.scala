@@ -99,26 +99,26 @@ object BDecoding extends BKey {
     def find(key: String) = new StartLooking()(key) // first () calls apply
   }
 
-  sealed trait BLookup
-  case class StartLook(b: BDecoding, key: BKey) extends BLookup
-  case class ContinueLook(b: BDecoding, keys: List[BKey]) extends BLookup
-  case class EndLook(b: BDecoding) extends BLookup
-
-  def startLookup(start: StartLook): (BKey) => BLookup = start match {
-    case StartLook(b,key) => continueLookup(ContinueLook(b,List(key)))_
-  }
-
-  def continueLookup(continuation: ContinueLook)(key: BKey) : (Bkey) => BLookup = key match {
-    case Bnull(()) => continuation match {
-      case ContinueLook(b,keys) => endLookup(EndLook(lookup(b,keys).get))
-    }
-    case Bmk(k) => continuation match {
-      case ContinueLook(b,keys) => continueLookup(ContinueLook(b, keys :+ Bmk(k)))
-    }
-    case Blk(k) =>
-  }
-
-  def endLookup()
+//  sealed trait BLookup
+//  case class StartLook(b: BDecoding, key: BKey) extends BLookup
+//  case class ContinueLook(b: BDecoding, keys: List[BKey]) extends BLookup
+//  case class EndLook(b: BDecoding) extends BLookup
+//
+//  def startLookup(start: StartLook): (BKey) => BLookup = start match {
+//    case StartLook(b,key) => continueLookup(ContinueLook(b,List(key)))_
+//  }
+//
+//  def continueLookup(continuation: ContinueLook)(key: BKey) : (BKey) => BLookup = key match {
+//    case Bnull(()) => continuation match {
+//      case ContinueLook(b,keys) => endLookup(EndLook(lookup(b,keys).get))
+//    }
+//    case Bmk(k) => continuation match {
+//      case ContinueLook(b,keys) => continueLookup(ContinueLook(b, keys :+ Bmk(k)))
+//    }
+//    case Blk(k) =>
+//  }
+//
+//  def endLookup()
   
   // usage: BstringEmpty.find("a key")(1)("another key").in(SomeBMap)(stringify)
 }
