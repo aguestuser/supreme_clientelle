@@ -9,7 +9,8 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies +=
-  "com.typesafe.akka" %% "akka-actor" % "2.4-SNAPSHOT"
+  "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
@@ -18,5 +19,4 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 
 resolvers ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
-resolvers += "Akka Snapshot Repository" at "http://repo.akka.io/snapshots/"
 

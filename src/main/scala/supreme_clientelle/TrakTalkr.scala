@@ -7,7 +7,7 @@ import supreme_clientelle.BDecoding._
 
 object TrakTalkr {
 
-  def getTrakRes(rawInfo: Array[Byte], bInfo: BDecoding) : BDecoding = {
+  def getPeers(rawInfo: Array[Byte], bInfo: BDecoding) : BDecoding = {
     val url: String = lookupAndStringify(bInfo, List(Bmk("announce")))
     val params = Map[String,String](
       "info_hash" -> (hash _ andThen escape)(rawInfo),

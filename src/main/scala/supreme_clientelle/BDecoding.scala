@@ -15,6 +15,7 @@ case class BMap(is: ListMap[BStr, BDecoding]) extends BDecoding
 sealed trait BKey
 case class Bmk(is: String) extends BKey
 case class Blk(is: Int) extends BKey
+case class Bnull(is: ()) extends BKey
 
 
 object BDecoding extends BKey {
@@ -78,25 +79,46 @@ object BDecoding extends BKey {
 
   abstract class LookerUpper {
     def apply(key: String): LookerUpper = new LookerUpper(key, this)
-    def run(b: BDecoding): Try[BDecoding] // abstract
-    def listify: List[BKey] // abstract
+    def doLookup(b: BDecoding): Try[BDecoding] // abstract
+    def listifyKeys: List[BKey] // abstract
 
-    def in(b: BDecoding) = (transformer: BDecoding => Try[String]) => transformer(run(b).get).get
+    def in(b: BDecoding) = (transformer: BDecoding => Try[String]) => transformer(doLookup(b).get).get
   }
 
   class KeepLooking(private val key: String, private val previous: KeepLooking) extends LookerUpper {
-    def run(b: BDecoding): Try[BDecoding] = lookup(b, listify)
-    def listify: List[BKey] = previous.listify :+ Bmk(key)
+    def doLookup(b: BDecoding): Try[BDecoding] = lookup(b, listifyKeys)
+    def listifyKeys: List[BKey] = previous.listifyKeys :+ Bmk(key)
   }
 
   class StartLooking extends LookerUpper {
-    def run(b: BDecoding) = Success(b) // base case
-    def listify = List()
+    def doLookup(b: BDecoding) = Success(b) // base case
+    def listifyKeys = List()
   }
 
   object StartLooking { // call to initialize lookup
     def find(key: String) = new StartLooking()(key) // first () calls apply
   }
 
+  sealed trait BLookup
+  case class StartLook(b: BDecoding, key: BKey) extends BLookup
+  case class ContinueLook(b: BDecoding, keys: List[BKey]) extends BLookup
+  case class EndLook(b: BDecoding) extends BLookup
+
+  def startLookup(start: StartLook): (BKey) => BLookup = start match {
+    case StartLook(b,key) => continueLookup(ContinueLook(b,List(key)))_
+  }
+
+  def continueLookup(continuation: ContinueLook)(key: BKey) : (Bkey) => BLookup = key match {
+    case Bnull(()) => continuation match {
+      case ContinueLook(b,keys) => endLookup(EndLook(lookup(b,keys).get))
+    }
+    case Bmk(k) => continuation match {
+      case ContinueLook(b,keys) => continueLookup(ContinueLook(b, keys :+ Bmk(k)))
+    }
+    case Blk(k) =>
+  }
+
+  def endLookup()
+  
   // usage: BstringEmpty.find("a key")(1)("another key").in(SomeBMap)(stringify)
 }

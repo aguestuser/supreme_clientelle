@@ -4,7 +4,7 @@
 		module="supreme_clientelle_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150113003928"
+		publication="20150116191407"
 	>
 		<description>
 		supreme_clientelle
@@ -33,6 +33,6 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.4" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.specs2" name="specs2-core_2.11" rev="2.4.15" conf="test->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.4-SNAPSHOT" conf="compile->default(compile)"/>
+		<dependency org="net.databinder.dispatch" name="dispatch-core_2.11" rev="0.11.2" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
