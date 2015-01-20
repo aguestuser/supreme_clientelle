@@ -1,34 +1,41 @@
 package supreme_clientelle
 import supreme_clientelle.BDecoding._
+import supreme_clientelle.config.Config
 
 /**
 * Created by aguestuser on '1'/'1''4'/'1''5'.
 */
 
-object TrakTalkr {
+object TrakrTalkr {
 
-  def getPeers(raw: Array[Byte], bInfo: BDecoding, cfg: Config, state: TorrentState) : BDecoding = {
-    val url: String = lookupAndStringify(bInfo, List(Bmk("announce")))
-    val params = getParams(raw, bInfo, cfg, state)
-    val request = formatRequest(url, params)
-    // fire off a url request with a future here!
-    BStrify("hmmm...")
+  def buildRequests(rawFiles: List[List[Byte]],
+                       bMaps: List[BDecoding],
+                       states: List[TorrentState]): List[String] = {
+    (rawFiles zip bMaps zip states).map {
+      case ((raw, map), state) => buildRequest(raw.toArray, map, state)
+    }
   }
 
-  def getParams(raw: Array[Byte], bInfo: BDecoding, cfg: Config, state: TorrentState) = {
+  def buildRequest(raw: Array[Byte], bInfo: BDecoding, state: TorrentState) : String = {
+    val url: String = lookupAndStringify(bInfo, List(Bmk("announce")))
+    val params = getParams(raw, bInfo, state)
+    formatRequest(url, params)
+  }
+
+  private def getParams(raw: Array[Byte], bInfo: BDecoding,state: TorrentState) = {
     List[(String,String)](
       ("info_hash", (hash _ andThen escape)(raw)),
       ("peer_id", "-AG0000-" + (hash _ andThen escape)("seed".getBytes).drop(6)),
-      ("port", cfg.port.toString),
+      ("port", Config.port.toString),
       ("uploaded", state.uploaded.toString),
       ("downloaded", state.downloaded.toString),
       ("left", state.left.toString),
-      ("compact", Config.stringifyBool(cfg.compact)),
-      ("no_peer_id", Config.stringifyBool(cfg.noPeerId)),
-      ("event", state.status.toString()),
+      ("compact", Config.stringifyBool(Config.compact)),
+      ("no_peer_id", Config.stringifyBool(Config.noPeerId)),
+      ("event", state.status.toString),
       ("numwant", state.numWant.toString),
 //      ("trackerid", ""),
-      ("length", lookupAndStringify(bInfo, List(Bmk("info"), Bmk("length"))))
+      ("length", lookupAndIntify(bInfo, List(Bmk("info"), Bmk("length"))).toString)
     )
   }
 
@@ -48,6 +55,6 @@ object TrakTalkr {
   }
 
   def formatRequest(url: String, params: List[(String,String)]) : String = {
-    url + "?" + params.flatMap(case (x:String,y:String) => x + "=" + y + "&")
+    url + "?" + params.map({case (x:String,y:String) => x + "=" + y}).mkString("&")
   }
 }

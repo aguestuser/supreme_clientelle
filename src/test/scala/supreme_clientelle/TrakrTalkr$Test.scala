@@ -1,12 +1,12 @@
 package supreme_clientelle
 
 import org.specs2.mutable.Specification
-import supreme_clientelle.TrakTalkr._
+import supreme_clientelle.TrakrTalkr._
 
 /**
  * Created by aguestuser on 1/15/15.
  */
-class TrakTalkr$Test extends Specification {
+class TrakrTalkr$Test extends Specification {
   "#escape" should {
     lazy val ba = Array[Byte](18, 52, 86, 120, -102, -68, -34, -15, 35, 69, 103, -119, -85, -51, -17, 18, 52, 86, 120, -102)
     //ie: \x12\x34\x56\x78\x9a\xbc\xde\xf1\x23\x45\x67\x89\xab\xcd\xef\x12\x34\x56\x78\x9a

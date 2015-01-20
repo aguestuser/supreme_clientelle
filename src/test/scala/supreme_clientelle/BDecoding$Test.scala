@@ -148,9 +148,9 @@ class BDecoding$Test extends Specification {
             BStrify("eggs") -> BStrify("eat your veggies!")))))))
 
 
-      "lookup strings with nice syntax" in {
-        StartLooking.find("breakfast map")("dinner map")("eggs").in(bm)(stringify) === "eat your veggies!"
-      }
+//      "lookup strings with nice syntax" in {
+//        StartLooking.find("breakfast map")("dinner map")("eggs").in(bm)(stringify) === "eat your veggies!"
+//      }
 
     }
 

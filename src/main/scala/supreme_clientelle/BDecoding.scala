@@ -15,7 +15,6 @@ case class BMap(is: ListMap[BStr, BDecoding]) extends BDecoding
 sealed trait BKey
 case class Bmk(is: String) extends BKey
 case class Blk(is: Int) extends BKey
-case class Bnull(is: ()) extends BKey
 
 
 object BDecoding extends BKey {
@@ -77,27 +76,27 @@ object BDecoding extends BKey {
   // OO WAY TO DO LOOKUP
   // question: how to make this work for BMaps that branch to BLists (and take Ints as keys?)
 
-  abstract class LookerUpper {
-    def apply(key: String): LookerUpper = new LookerUpper(key, this)
-    def doLookup(b: BDecoding): Try[BDecoding] // abstract
-    def listifyKeys: List[BKey] // abstract
-
-    def in(b: BDecoding) = (transformer: BDecoding => Try[String]) => transformer(doLookup(b).get).get
-  }
-
-  class KeepLooking(private val key: String, private val previous: KeepLooking) extends LookerUpper {
-    def doLookup(b: BDecoding): Try[BDecoding] = lookup(b, listifyKeys)
-    def listifyKeys: List[BKey] = previous.listifyKeys :+ Bmk(key)
-  }
-
-  class StartLooking extends LookerUpper {
-    def doLookup(b: BDecoding) = Success(b) // base case
-    def listifyKeys = List()
-  }
-
-  object StartLooking { // call to initialize lookup
-    def find(key: String) = new StartLooking()(key) // first () calls apply
-  }
+//  abstract class LookerUpper {
+//    def apply(key: String): LookerUpper = new LookerUpper(key, this)
+//    def doLookup(b: BDecoding): Try[BDecoding] // abstract
+//    def listifyKeys: List[BKey] // abstract
+//
+//    def in(b: BDecoding) = (transformer: BDecoding => Try[String]) => transformer(doLookup(b).get).get
+//  }
+//
+//  class KeepLooking(private val key: String, private val previous: KeepLooking) extends LookerUpper {
+//    def doLookup(b: BDecoding): Try[BDecoding] = lookup(b, listifyKeys)
+//    def listifyKeys: List[BKey] = previous.listifyKeys :+ Bmk(key)
+//  }
+//
+//  class StartLooking extends LookerUpper {
+//    def doLookup(b: BDecoding) = Success(b) // base case
+//    def listifyKeys = List()
+//  }
+//
+//  object StartLooking { // call to initialize lookup
+//    def find(key: String) = new StartLooking()(key) // first () calls apply
+//  }
 
 //  sealed trait BLookup
 //  case class StartLook(b: BDecoding, key: BKey) extends BLookup

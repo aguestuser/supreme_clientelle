@@ -74,13 +74,15 @@ class BCodr$Test extends Specification with Util {
       "map with nested map" in {
         decode("d9:publisher3:bob17:publisher-details" +
           "d17:publisher-webpage15:www.example.com18:publisher.location4:home5:isbns" +
-          "li1ei2ei3eeeee") ===
+          "li1ei2ei3eeee") ===
           BMap(ListMap(
             BStr("publisher".getBytes.toList) -> BStr("bob".getBytes.toList),
-            BStr("publisher-details".getBytes.toList) -> BMap(ListMap(
-              BStr("publisher-webpage".getBytes.toList) -> BStr("www.example.com".getBytes.toList),
-              BStr("publisher.location".getBytes.toList) -> BStr("home".getBytes.toList),
-              BStr("isbns".getBytes.toList) -> BList(List(BInt(1), BInt(2), BInt(3)))))))
+            BStr("publisher-details".getBytes.toList) ->
+              BMap(ListMap(
+                BStr("publisher-webpage".getBytes.toList) -> BStr("www.example.com".getBytes.toList),
+                BStr("publisher.location".getBytes.toList) -> BStr("home".getBytes.toList),
+                BStr("isbns".getBytes.toList) ->
+                  BList(List(BInt(1), BInt(2), BInt(3)))))))
       }
       "empty map" in {
         decode("de") === BMap(ListMap[BStr,BDecoding]())
@@ -89,10 +91,87 @@ class BCodr$Test extends Specification with Util {
   }
 
   "BCodr.encode" should {
-    "correctly encode ints" in pending { true }
-    "correctly encode strings" in pending { true }
-    "correctly encode lists" in pending { true }
-    "correctly encode maps" in pending { true }
+
+    "correctly encode INTS" in {
+
+      "a positive int" in { encode(BInt(123)) === "i123e".getBytes.toList }
+      "a negative int" in { encode(BInt(-123)) === "i-123e".getBytes.toList }
+      "zero" in { encode(BInt(0)) === "i0e".getBytes.toList }
+      "int with every digit and a leading 0" in {
+        encode(BInt(123456789)) === "i123456789e".getBytes.toList
+      }
+    }
+    "correctly encode STRINGS" in {
+      
+      "simple string" in {
+        encode(BStrify("foo")) === "3:foo".getBytes.toList
+      }
+      "string with spaces" in {
+        encode(BStrify("austin spencer guest")) === "20:austin spencer guest".getBytes.toList
+      }
+      "string with every numerical digit" in {
+        encode(BStrify("1234567890")) === "10:1234567890".getBytes.toList
+      }
+      "string of non-character bytes" in {
+        encode(BStr(List[Byte](-35, -82, -8, -119, -111))) ===
+          List[Byte](53, 58, -35, -82, -8, -119, -111)
+      }
+    }
+    "correctly encode LISTS" in  {
+      
+      "simple list" in {
+        encode(BList(List(BInt(2), BStrify("spam"), BStrify("egg")))
+        ) === "li2e4:spam3:egge".getBytes.toList
+      }
+      "nested list" in {
+        encode(BList(List(
+          BInt(2),
+          BStrify("spam"),
+          BStrify("egg"),
+          BList(List(BInt(2), BStrify("spam"), BStrify("egg")))))
+        ) === "li2e4:spam3:eggli2e4:spam3:eggee".getBytes.toList
+      }
+      "empty list" in {
+        encode(BList(List())) === "le".getBytes.toList
+      }      
+    }
+    "correctly encode MAPS" in {
+
+      "simple map" in {
+
+        encode(BMap(ListMap(
+          BStr("cow".getBytes.toList) -> BStr("moo".getBytes.toList),
+          BStr("spam".getBytes.toList) -> BStr("eggs".getBytes.toList),
+          BStr("num".getBytes.toList) -> BInt(3)))
+        ) === "d3:cow3:moo4:spam4:eggs3:numi3ee".getBytes.toList
+      }
+      "map with nested list" in {
+
+        encode(BMap(ListMap(
+          BStr("spam".getBytes.toList) -> BList(List(
+            BStr("a".getBytes.toList), BStr("b".getBytes.toList)))))
+        ) === "d4:spaml1:a1:bee".getBytes.toList
+      }
+      "map with nested map" in {
+
+        encode(
+          BMap(ListMap(
+            BStr("publisher".getBytes.toList) -> BStr("bob".getBytes.toList),
+            BStr("publisher-details".getBytes.toList) ->
+              BMap(ListMap(
+                BStr("publisher-webpage".getBytes.toList) -> BStr("www.example.com".getBytes.toList),
+                BStr("publisher.location".getBytes.toList) -> BStr("home".getBytes.toList),
+                BStr("isbns".getBytes.toList) ->
+                  BList(List(BInt(1), BInt(2), BInt(3)))))))
+        ) === ("d9:publisher3:bob17:publisher-details" +
+          "d17:publisher-webpage15:www.example.com18:publisher.location4:home5:isbns" +
+          "li1ei2ei3eeee").getBytes.toList
+      }
+      "empty map" in {
+
+        encode(BMap(ListMap[BStr,BDecoding]())) === "de".getBytes.toList
+      }
+    }
   }
 
 }

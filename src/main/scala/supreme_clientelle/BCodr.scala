@@ -11,6 +11,9 @@ object BCodr extends Util {
   def decode(str: String) : BDecoding = decode(str.getBytes.toList)
   def decode(bytes: List[Byte]) : BDecoding = decodeOne(bytes)._1
 
+  def encode(b: BDecoding) : List[Byte] = encodeOne(b)
+
+  // helpers for #decode
   private def decodeOne(rem: List[Byte]) : (BDecoding, List[Byte]) = rem match {
     case 'i' :: tail => decodeInt(tail)
     case n :: tail if n.toChar.isDigit => decodeStr(rem)
@@ -42,6 +45,29 @@ object BCodr extends Util {
       val (map, newestTail) = decodeMap(newTail)
       (ListMap(Tuple2(key, value)) ++ map, newestTail) }
 
+  private def encodeOne(b: BDecoding) = b match {
+    case BInt(i) => encodeInt(i)
+    case BStr(bytes) => encodeStr(bytes)
+    case BList(bl) => encodeList(bl)
+    case BMap(bm) => encodeMap(bm)
+  }
+
+  private def encodeInt(i: Int) : List[Byte] =
+    'i'.toByte :: (i.toString.getBytes.toList :+ 'e'.toByte)
+
+  private def encodeStr(bytes: List[Byte]) : List[Byte] =
+    bytes.size.toString.getBytes.toList ++ (':'.toByte :: bytes)
+
+  private def encodeList(bl: List[BDecoding]) : List[Byte] =
+    'l'.toByte :: (bl.flatMap(encodeOne) :+ 'e'.toByte)
+
+  private def encodeMap(bm: Map[BStr,BDecoding]) : List[Byte] =
+    'd'.toByte :: (
+      (bm.keys.toList.map(encodeOne)
+        zip bm.values.toList.map(encodeOne))
+        .flatMap({ case (x,y) => x ++ y }
+      ) :+ 'e'.toByte
+    )
 }
 
 // question: how to sha-1 encode a byte array?
