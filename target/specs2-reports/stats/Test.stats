@@ -613,3 +613,76 @@
 <Test-stats timestamp="1421384583323"><stats time="18" expectations="1" failures="1" examples="1"></stats></Test-stats>
 <Test-stats timestamp="1421384875111"><stats time="37" expectations="1" successes="1" examples="1"><trend><stats time="37" failures="-1" successes="1"></stats></trend></stats></Test-stats>
 <Test-stats timestamp="1421385201312"><stats time="15" expectations="1" successes="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1421718059760"><result location="supreme_clientelle.Main (Main$Test.scala:12)" id="1236607046"><stats time="25" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421718059848"><stats time="31" expectations="1" errors="1" examples="1"><trend><stats time="31" errors="1" successes="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421718199549"><result location="supreme_clientelle.Main (Main$Test.scala:12)" id="1236607046"><stats time="16" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421718199646"><stats time="24" expectations="1" errors="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1421718220207"><result location="supreme_clientelle.Main (Main$Test.scala:12)" id="1236607046"><stats time="15" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421718220324"><stats time="18" expectations="1" errors="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1421718280472"><result location="supreme_clientelle.Main (Main$Test.scala:12)" id="1236607046"><stats time="110" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421718280561"><stats time="16" expectations="1" errors="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1421718436913"><result location="supreme_clientelle.Main (Main$Test.scala:12)" id="1236607046"><stats time="133" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421718437056"><stats time="14" expectations="1" failures="1" examples="1"><trend><stats time="14" failures="1" errors="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421718519650"><result location="supreme_clientelle.Main (Main$Test.scala:12)" id="1236607046"><stats time="127" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421718519751"><stats time="15" expectations="1" failures="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1421718664842"><stats time="28" expectations="1" successes="1" examples="1"><trend><stats time="28" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421719264057"><stats time="17" expectations="1" successes="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1421776929655"><stats time="5"><trend><stats time="5" expectations="-1" successes="-1" examples="-1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421776943045"><stats time="5"><trend><stats time="5" expectations="-1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421776970009"><stats time="9"><trend><stats time="9" expectations="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421776978074"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:94)" id="1926057639"><stats time="39" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421776978156"><stats time="42" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="42" expectations="1" failures="1" successes="1" examples="2"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421777016413"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:94)" id="1926057639"><stats time="21" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421777016509"><stats time="32" expectations="2" failures="1" successes="1" examples="2"></stats></Test-stats>
+<Test-stats timestamp="1421777046726"><stats time="29" expectations="2" successes="2" examples="2"><trend><stats time="29" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421777153424"><stats time="8"><trend><stats time="8" expectations="-2" successes="-2" examples="-2"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421777163688"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:98)" id="-1758730931"><stats time="4" expectations="1" failures="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BCodr (BCodr$Test.scala:102)" id="-1677930943"><stats pending="1" time="2" expectations="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BCodr (BCodr$Test.scala:103)" id="487551764"><stats pending="1" time="2" expectations="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BCodr (BCodr$Test.scala:104)" id="-1646818504"><stats pending="1" time="2" expectations="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421777163782"><stats pending="3" time="46" expectations="22" failures="1" successes="18" examples="22"><trend><stats pending="3" time="46" expectations="21" failures="1" successes="18" examples="22"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421777274321"><stats time="35" expectations="2" successes="2" examples="2"><trend><stats pending="-3" time="35" expectations="-20" failures="-1" successes="-16" examples="-20"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421777599052"><stats time="26" expectations="2" successes="2" examples="2"></stats></Test-stats>
+<Test-stats timestamp="1421777610492"><stats time="23" expectations="2" successes="2" examples="2"></stats></Test-stats>
+<Test-results timestamp="1421777619087"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:118)" id="487551764"><stats pending="1" time="1" expectations="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BCodr (BCodr$Test.scala:119)" id="-1646818504"><stats pending="1" time="1" expectations="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421777619207"><stats pending="2" time="36" expectations="25" successes="23" examples="25"><trend><stats pending="2" time="36" expectations="23" successes="21" examples="23"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421778287711"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:136)" id="-1646818504"><stats pending="1" time="2" expectations="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421778287818"><stats pending="1" time="34" expectations="27" successes="26" examples="27"><trend><stats pending="-1" time="34" expectations="2" successes="3" examples="2"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421778581313"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:138)" id="-1433126418"><stats time="10" expectations="1" failures="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BCodr (BCodr$Test.scala:146)" id="531997713"><stats time="9" expectations="1" failures="1" examples="1"></stats></result>
+<result location="supreme_clientelle.BCodr (BCodr$Test.scala:153)" id="-1922500727"><stats time="8" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421778581404"><stats time="33" expectations="30" failures="3" successes="27" examples="30"><trend><stats pending="-1" time="33" expectations="3" failures="3" successes="1" examples="3"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421780225999"><stats time="53" expectations="2" successes="2" examples="2"><trend><stats time="53" expectations="-28" failures="-3" successes="-25" examples="-28"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421780283905"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:153)" id="-1922500727"><stats time="5" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421780284011"><stats time="25" expectations="30" failures="1" successes="29" examples="30"><trend><stats time="25" expectations="28" failures="1" successes="27" examples="28"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421780318656"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:153)" id="-1922500727"><stats time="52" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421780318745"><stats time="31" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="31" expectations="-28" successes="-28" examples="-28"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421780506606"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:153)" id="-1922500727"><stats time="35" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421780506700"><stats time="28" expectations="2" failures="1" successes="1" examples="2"></stats></Test-stats>
+<Test-stats timestamp="1421780533920"><stats time="35" expectations="2" successes="2" examples="2"><trend><stats time="35" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421790457186"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:153)" id="-1922500727"><stats time="38" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421790457283"><stats time="35" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="35" failures="1" successes="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1421790972497"><result location="supreme_clientelle.BCodr (BCodr$Test.scala:153)" id="-1922500727"><stats time="33" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1421790972595"><stats time="37" expectations="2" failures="1" successes="1" examples="2"></stats></Test-stats>
+<Test-stats timestamp="1421791127469"><stats time="31" expectations="2" successes="2" examples="2"><trend><stats time="31" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1421791152635"><stats time="44" expectations="2" successes="2" examples="2"></stats></Test-stats>
+<Test-stats timestamp="1421791171974"><stats time="27" expectations="2" successes="2" examples="2"></stats></Test-stats>
+<Test-stats timestamp="1421791213857"><stats time="26" expectations="30" successes="30" examples="30"><trend><stats time="26" expectations="28" successes="28" examples="28"></stats></trend></stats></Test-stats>
