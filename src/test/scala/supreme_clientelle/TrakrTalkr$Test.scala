@@ -1,22 +1,50 @@
 package supreme_clientelle
 
 import org.specs2.mutable.Specification
-import supreme_clientelle.TrakrTalkr._
 
 /**
  * Created by aguestuser on 1/15/15.
  */
 class TrakrTalkr$Test extends Specification {
-  "#escape" should {
-    lazy val ba = Array[Byte](18, 52, 86, 120, -102, -68, -34, -15, 35, 69, 103, -119, -85, -51, -17, 18, 52, 86, 120, -102)
-    //ie: \x12\x34\x56\x78\x9a\xbc\xde\xf1\x23\x45\x67\x89\xab\xcd\xef\x12\x34\x56\x78\x9a
 
-    "escape a byte array with non-character bytes" in {
-      escape(ba) === "%124Vx%9a%bc%de%f1%23Eg%89%ab%cd%ef%124Vx%9a"
-    }
+  lazy val cfg: Config = new Config
+  lazy val metaInfos = TorrentManager.getMetaInfos(cfg.torrentQueue)
+  lazy val states = TorrentManager.getTorrentStates(metaInfos)
+  lazy val expectedRequests = TrakrTalkr.buildRequests(metaInfos, states, cfg)
+//  lazy val expectedResponses = TrakrTalkr.getResponses(expectedRequests)
 
-    "compose with #hash correctly" in {
-      (hash _ andThen escape)(ba) === "%c5%85%16%3e%8a%ca%85PZ792%27%db%c6%c8X%9c%17%3d"
+  "#buildRequests" should {
+
+    "generate correct tracker request" in {
+
+      expectedRequests.head ===
+        "http://thomasballinger.com:6969/announce" +
+          "?info_hash=%2B%15%CA%2B%FDH%CD%D7m9%ECU%A3%AB%1B%8AW%18%0A%09" +
+          "&peer_id=-AG0000-%FE%D0k%CF4S%EBm%E6144%E2%86%89e%BF%07" +
+          "&port=6881" +
+          "&uploaded=0" +
+          "&downloaded=0" +
+          "&left=1277987" +
+          "&compact=1" +
+          "&no_peer_id=0" +
+          "&event=started" +
+          "&numwant=50" +
+          "&length=1277987"
+
+      // TANSY'S WORKING REQUEST
+      // http://thomasballinger.com:6969/announce
+      // ?left=1277987
+      // &info_hash=%2B%15%CA%2B%FDH%CD%D7m9%ECU%A3%AB%1B%8AW%18%0A%09
+      // &downloaded=0
+      // &event=started
+      // &peer_id=-TZ-0000-00000000000
+      // &port=6881
     }
+  }
+
+  "#getResponses" should {
+
+    "get correct response from Tracker" in pending { true }
+
   }
 }

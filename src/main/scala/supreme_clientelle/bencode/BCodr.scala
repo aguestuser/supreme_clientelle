@@ -1,4 +1,6 @@
-package supreme_clientelle
+package supreme_clientelle.bencode
+
+import supreme_clientelle._
 
 import scala.collection.immutable.ListMap
 
@@ -8,9 +10,9 @@ import scala.collection.immutable.ListMap
 
 object BCodr extends Util {
 
+  // public methods
   def decode(str: String) : BDecoding = decode(str.getBytes.toList)
   def decode(bytes: List[Byte]) : BDecoding = decodeOne(bytes)._1
-
   def encode(b: BDecoding) : List[Byte] = encodeOne(b)
 
   // helpers for #decode
@@ -51,6 +53,8 @@ object BCodr extends Util {
     case BList(bl) => encodeList(bl)
     case BMap(bm) => encodeMap(bm)
   }
+
+  // helpers for #encode
 
   private def encodeInt(i: Int) : List[Byte] =
     'i'.toByte :: (i.toString.getBytes.toList :+ 'e'.toByte)

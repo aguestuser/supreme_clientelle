@@ -1,4 +1,4 @@
-package supreme_clientelle
+package supreme_clientelle.bencode
 
 import scala.collection.immutable.ListMap
 import scala.util.{Failure, Success, Try}
@@ -7,7 +7,9 @@ import scala.util.{Failure, Success, Try}
  * Created by aguestuser on 1/14/15.
  */
 sealed trait BDecoding
-case class BStr(is: List[Byte]) extends BDecoding
+case class BStr(is: List[Byte]) extends BDecoding {
+  override def toString = "BStr(BStrify" + is.map(_.toChar).mkString +"))"
+}
 case class BInt(is: Int) extends BDecoding
 case class BList(is: List[BDecoding]) extends BDecoding
 case class BMap(is: ListMap[BStr, BDecoding]) extends BDecoding
@@ -63,6 +65,32 @@ object BDecoding extends BKey {
     case BInt(i) => Success(BInt(i))
   }
 
+  def hash(bytes: Array[Byte]) : Array[Byte] =
+    java.security.MessageDigest.getInstance("SHA-1").digest(bytes)
+
+  def escape(bytes: Array[Byte]) : String = {
+    val allowed = Set('0','1','2','3','4','5','6','7','8','9',
+      'A','B','C','D','E','F','G','H','I','J','K','L','M',
+      'N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+      'a','b','c','d','e','f','g','h','i','j','k','l','m',
+      'n','o','p','q','r','s','t','u','v','w','x','y','z',
+      '.','-','_','~')
+      .map(_.toByte)
+    bytes
+      .map(charifyOrHexify(allowed))
+      .map(doubleDigitize)
+      .mkString
+  }
+
+  private def charifyOrHexify(allowed: Set[Byte])(b: Byte) : String =
+    if (allowed.contains(b)) b.toChar.toString else hexify(b)
+
+  private def hexify(b: Byte) : String =
+    "%" + b.toHexString.replace("ffffff","").toUpperCase
+
+  private def doubleDigitize(hex: String) : String =
+    """(%)([A-Z|0-9])(%|$)""".r.replaceAllIn(hex, m => (m group 1) + "0" + (m group 2) )
+
   private def curryTypeErr(method: String, expectedType: String)(actualType: String, actualObject: BDecoding): Exception = {
     new Exception("BDecoding#" + method + " expects a " + expectedType +
       " but received the following " + actualType + ": " + actualObject.toString)
@@ -72,52 +100,4 @@ object BDecoding extends BKey {
     new Exception("BDecoding#lookup on a" + _type + " requires a " + expectedKey + " key" +
       ", but was provided the following " + actKeyStr + " as a key: " + actKey)
   }
-
-  // OO WAY TO DO LOOKUP
-  // question: how to make this work for BMaps that branch to BLists (and take Ints as keys?)
-
-//  abstract class LookerUpper {
-//    def apply(key: String): LookerUpper = new LookerUpper(key, this)
-//    def doLookup(b: BDecoding): Try[BDecoding] // abstract
-//    def listifyKeys: List[BKey] // abstract
-//
-//    def in(b: BDecoding) = (transformer: BDecoding => Try[String]) => transformer(doLookup(b).get).get
-//  }
-//
-//  class KeepLooking(private val key: String, private val previous: KeepLooking) extends LookerUpper {
-//    def doLookup(b: BDecoding): Try[BDecoding] = lookup(b, listifyKeys)
-//    def listifyKeys: List[BKey] = previous.listifyKeys :+ Bmk(key)
-//  }
-//
-//  class StartLooking extends LookerUpper {
-//    def doLookup(b: BDecoding) = Success(b) // base case
-//    def listifyKeys = List()
-//  }
-//
-//  object StartLooking { // call to initialize lookup
-//    def find(key: String) = new StartLooking()(key) // first () calls apply
-//  }
-
-//  sealed trait BLookup
-//  case class StartLook(b: BDecoding, key: BKey) extends BLookup
-//  case class ContinueLook(b: BDecoding, keys: List[BKey]) extends BLookup
-//  case class EndLook(b: BDecoding) extends BLookup
-//
-//  def startLookup(start: StartLook): (BKey) => BLookup = start match {
-//    case StartLook(b,key) => continueLookup(ContinueLook(b,List(key)))_
-//  }
-//
-//  def continueLookup(continuation: ContinueLook)(key: BKey) : (BKey) => BLookup = key match {
-//    case Bnull(()) => continuation match {
-//      case ContinueLook(b,keys) => endLookup(EndLook(lookup(b,keys).get))
-//    }
-//    case Bmk(k) => continuation match {
-//      case ContinueLook(b,keys) => continueLookup(ContinueLook(b, keys :+ Bmk(k)))
-//    }
-//    case Blk(k) =>
-//  }
-//
-//  def endLookup()
-  
-  // usage: BstringEmpty.find("a key")(1)("another key").in(SomeBMap)(stringify)
 }

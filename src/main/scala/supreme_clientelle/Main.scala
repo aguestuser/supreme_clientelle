@@ -6,18 +6,10 @@ package supreme_clientelle
 
 object Main extends App {
 
-  val metaInfoFiles = TorrentManager.getMetaInfoFiles
-  val metaInfoDictionaries = TorrentManager.getMetaInfoDictionaries(metaInfoFiles)
-  val states = TorrentManager.getTorrentStates(metaInfoDictionaries, List[TorrentState]())
+  val cfg: Config = new Config
+  val metaInfos = TorrentManager.getMetaInfos(cfg.torrentQueue)
+  val states = TorrentManager.getTorrentStates(metaInfos)
 
-  val trakrRequests = TrakrTalkr.buildRequests(metaInfoFiles, metaInfoDictionaries, states)
-
-
-  // TODO add check for state of torrents in queue with something like:
-  //  val downloadPaths : DirectoryStream[Path] = {}
-  //  val downloadFiles : List[List[Byte]] = {}
-  //  val downloadStatuses : List[TorrentState] = {}
-  //
-  //  val states = getTorrentStates(metaInfoDictionaries, downloadStatuses)
+  val trakrRequests = TrakrTalkr.buildRequests(metaInfos, states, cfg)
 
 }

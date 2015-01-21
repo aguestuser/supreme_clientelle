@@ -1,6 +1,9 @@
 package supreme_clientelle
-import supreme_clientelle.BDecoding._
-import supreme_clientelle.config.Config
+
+import supreme_clientelle.bencode.BDecoding
+import supreme_clientelle.bencode.MetaInfoAccessor._
+
+
 
 /**
 * Created by aguestuser on '1'/'1''4'/'1''5'.
@@ -8,53 +11,35 @@ import supreme_clientelle.config.Config
 
 object TrakrTalkr {
 
-  def buildRequests(rawFiles: List[List[Byte]],
-                       bMaps: List[BDecoding],
-                       states: List[TorrentState]): List[String] = {
-    (rawFiles zip bMaps zip states).map {
-      case ((raw, map), state) => buildRequest(raw.toArray, map, state)
-    }
+  def buildRequests(bMaps: List[BDecoding], states: List[TorrentState], cfg: Config): List[String] = {
+    (bMaps zip states).map( { case (map, state) => buildRequest(map, state, cfg) } )
   }
 
-  def buildRequest(raw: Array[Byte], bInfo: BDecoding, state: TorrentState) : String = {
-    val url: String = lookupAndStringify(bInfo, List(Bmk("announce")))
-    val params = getParams(raw, bInfo, state)
+  def buildRequest(bMap: BDecoding, state: TorrentState, cfg: Config) : String = {
+    val url = getAnnounceUrl(bMap)
+    val params = getParams(bMap, state, cfg)
     formatRequest(url, params)
   }
 
-  private def getParams(raw: Array[Byte], bInfo: BDecoding,state: TorrentState) = {
+  private def getParams(bMap: BDecoding, state: TorrentState, cfg: Config) = {
     List[(String,String)](
-      ("info_hash", (hash _ andThen escape)(raw)),
-      ("peer_id", "-AG0000-" + (hash _ andThen escape)("seed".getBytes).drop(6)),
-      ("port", Config.port.toString),
+      ("info_hash", getInfoHash(bMap)),
+      ("peer_id",  getPeerIdHash(bMap)),
+      ("port", cfg.port.toString),
       ("uploaded", state.uploaded.toString),
       ("downloaded", state.downloaded.toString),
       ("left", state.left.toString),
-      ("compact", Config.stringifyBool(Config.compact)),
-      ("no_peer_id", Config.stringifyBool(Config.noPeerId)),
+      ("compact", cfg.compactAsStr),
+      ("no_peer_id", cfg.noPeerIdAsStr),
       ("event", state.status.toString),
       ("numwant", state.numWant.toString),
-//      ("trackerid", ""),
-      ("length", lookupAndIntify(bInfo, List(Bmk("info"), Bmk("length"))).toString)
+      ("length", getLength(bMap).toString)
+      //      ("trackerid", "")
     )
   }
 
-  def hash(bytes: Array[Byte]) : Array[Byte] =
-    java.security.MessageDigest.getInstance("SHA-1").digest(bytes)
-
-  def escape(bytes: Array[Byte]) : String = {
-    val allowed = Set('0','1','2','3','4','5','6','7','8','9',
-      'A','B','C','D','E','F','G','H','I','J','K','L','M',
-      'N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
-      'a','b','c','d','e','f','g','h','i','j','k','l','m',
-      'n','o','p','q','r','s','t','u','v','w','x','y','z',
-      '.','-','_','~').map(_.toByte)
-    bytes.map(
-      x => if (allowed.contains(x)) x.toChar.toString else "%" + x.toHexString.replace("ffffff","")
-    ).mkString
-  }
-
-  def formatRequest(url: String, params: List[(String,String)]) : String = {
+  private def formatRequest(url: String, params: List[(String,String)]) : String = {
     url + "?" + params.map({case (x:String,y:String) => x + "=" + y}).mkString("&")
   }
+
 }
