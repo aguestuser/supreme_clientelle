@@ -654,9 +654,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 990ms :: artifacts dl 29ms
+[debug] :: resolution report :: resolve 1373ms :: artifacts dl 35ms
 [debug] 	report for default#supreme_clientelle$sbt_2.11;1.0 default produced in /Users/aguestuser/code/hackerschool/supreme_clientelle/target/resolution-cache/reports/default-supreme_clientelle$sbt_2.11-default.xml
-[debug] 	resolve done (990ms resolve - 29ms download)
+[debug] 	resolve done (1373ms resolve - 35ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#supreme_clientelle$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1019,6 +1019,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
 [debug] 	[NOT REQUIRED] net.virtual-void#sbt-dependency-graph;0.7.4!sbt-dependency-graph.jar(src)
 [debug] 	[NOT REQUIRED] com.github.mdr#ascii-graphs_2.10;0.0.3!ascii-graphs_2.10.jar(src)
-[debug] :: resolution report :: resolve 196ms :: artifacts dl 41ms
+[debug] :: resolution report :: resolve 279ms :: artifacts dl 40ms
 [debug] 	report for default#supreme_clientelle$sources_2.11;1.0 default produced in /Users/aguestuser/code/hackerschool/supreme_clientelle/target/resolution-cache/reports/default-supreme_clientelle$sources_2.11-default.xml
-[debug] 	resolve done (196ms resolve - 41ms download)
+[debug] 	resolve done (279ms resolve - 40ms download)

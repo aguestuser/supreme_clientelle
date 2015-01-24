@@ -17,7 +17,7 @@ class TrakrTalkr$Test extends Specification {
 
     "generate correct tracker request" in {
 
-      expectedRequests.head ===
+      expectedRequests.head.toRequest ===
         "http://thomasballinger.com:6969/announce" +
           "?info_hash=%2B%15%CA%2B%FDH%CD%D7m9%ECU%A3%AB%1B%8AW%18%0A%09" +
           "&peer_id=-AG0000-%FE%D0k%CF4S%EBm%E6144%E2%86%89e%BF%07" +
@@ -30,6 +30,26 @@ class TrakrTalkr$Test extends Specification {
           "&event=started" +
           "&numwant=50" +
           "&length=1277987"
+    }
+  }
+
+  "#buildReqs" should {
+
+    "generate correct tracker request" in {
+
+      expectedRequests.head.toRequest === "http://thomasballinger.com:6969/announce" +
+        "?info_hash=%2B%15%CA%2B%FDH%CD%D7m9%ECU%A3%AB%1B%8AW%18%0A%09" +
+        "&peer_id=-AG0000-%FE%D0k%CF4S%EBm%E6144%E2%86%89e%BF%07" +
+        "&port=6881" +
+        "&uploaded=0" +
+        "&downloaded=0" +
+        "&left=1277987" +
+        "&compact=1" +
+        "&no_peer_id=0" +
+        "&event=started" +
+        "&numwant=50" +
+        "&length=1277987" +
+        "\tGET\theaders:"
 
       // TANSY'S WORKING REQUEST
       // http://thomasballinger.com:6969/announce

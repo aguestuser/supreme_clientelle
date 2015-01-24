@@ -11,7 +11,6 @@ libraryDependencies ++= Seq(
 libraryDependencies +=
   "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
 
-
 scalacOptions in Test ++= Seq("-Yrangepos")
 
 // Read here for optional jars and dependencies:

@@ -4,7 +4,7 @@
 		module="supreme_clientelle$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150116191415"
+		publication="20150122190743"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

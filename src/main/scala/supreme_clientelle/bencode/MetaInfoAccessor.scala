@@ -1,7 +1,7 @@
 package supreme_clientelle.bencode
 
-import supreme_clientelle.bencode.BDecoding._
-import supreme_clientelle.bencode.BCodr._
+import BDecoding._
+import BCodr._
 
 
 /**
@@ -19,6 +19,12 @@ object MetaInfoAccessor {
   def getPeerIdHash(b: BDecoding) : String = {// TODO randomize this!
     "-AG0000-" + (hash _ andThen escape)("Austin Spencer Guest".getBytes).drop(6)
   }
+
+//  def getInfoHash(b: BDecoding) : String =
+//    hash(encode(lookup(b, List(Bmk("info"))).get).toArray).map(_.toChar).mkString
+//
+//  def getPeerIdHash(b: BDecoding) : String = // TODO randomize this!
+//    "-AG0000-" + hash("Austin Spencer Guest".getBytes).drop(6).map(_.toChar).mkString
 
   def hash(bytes: Array[Byte]) : Array[Byte] =
     java.security.MessageDigest.getInstance("SHA-1").digest(bytes)
@@ -45,5 +51,6 @@ object MetaInfoAccessor {
 
   private def doubleDigitize(hex: String) : String =
     """(%)([A-Z|0-9])(%|$)""".r.replaceAllIn(hex, m => (m group 1) + "0" + (m group 2) )
+
 
 }
