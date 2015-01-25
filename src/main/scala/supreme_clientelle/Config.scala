@@ -7,10 +7,6 @@ package supreme_clientelle
 class Config(
               val torrentQueue: String =
                 "src/test/resources/torrent_queue",
-<<<<<<< HEAD
-            //TODO replace with relative path
-=======
->>>>>>> d308182a4bc621f8de8209eec788cce76eb18dd8
               val port: Int =
                 6881, // permitted: Set{ 6881, 6882, 6883, 6884, 6885, 6886, 6887, 6888, 6889 }
               val noPeerId: Boolean =

@@ -19,9 +19,7 @@ object TrakrTalkr {
     rb.setUrl(formatRequest(_url, params)).GET
   }
 
-  def getResponse(req: Req) = {
-    Http(req OK as.Bytes)
-  }
+  def getResponse(req: Req) : Future[Array[Byte]] = Http(req OK as.Bytes)
 
   private def getPars(b: BDecoding, state: TorrentState, cfg: Config) = {
     List[(String,String)](
@@ -41,8 +39,5 @@ object TrakrTalkr {
 
   private def formatRequest(url: String, params: List[(String,String)]) : String =
     url + "?" + params.map({case (x:String,y:String) => x + "=" + y}).mkString("&")
-
-  // TODO dispatch is url-escaping my percent signs!!! how can i make it stop???
-  // https://bhudgeons.telegr.am/blog_posts/handling-non-standard-urls-in-dispatch
 
 }
