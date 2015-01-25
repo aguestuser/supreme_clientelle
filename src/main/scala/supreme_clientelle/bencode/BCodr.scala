@@ -1,14 +1,12 @@
 package supreme_clientelle.bencode
 
-import supreme_clientelle._
-
 import scala.collection.immutable.ListMap
 
 /**
  * Created by aguestuser on 1/8/15.
  */
 
-object BCodr extends Util {
+object BCodr {
 
   // public methods
   def decode(str: String) : BDecoding = decode(str.getBytes.toList)
@@ -21,15 +19,15 @@ object BCodr extends Util {
     case n :: tail if n.toChar.isDigit => decodeStr(rem)
     case 'l' :: tail =>  val (l, rest) = decodeList(tail); (BList(l), rest)
     case 'd' :: tail => val (l, rest) = decodeMap(tail); (BMap(l), rest)
-    case bad => throw new IllegalArgumentException("Bencoding error starting at" + bytesToStr(bad.take(10))) }
+    case bad => throw new Exception("Bencoding error starting at" + bad.take(10).map(_.toChar).mkString) }
 
   private def decodeInt(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
     val (intBytes, _ :: tail) = bytes.span(_.toChar != 'e')
-    (BInt(bytesToStr(intBytes).toInt), tail) }
+    (BInt(intBytes.map(_.toChar).mkString.toInt), tail) }
 
   private def decodeStr(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
     val (len, _ :: tail) = bytes.span(_.toChar != ':')
-    val (strBytes, newTail) = tail.splitAt(bytesToStr(len).toInt)
+    val (strBytes, newTail) = tail.splitAt(len.map(_.toChar).mkString.toInt)
     (BStr(strBytes), newTail) }
 
   private def decodeList(bytes: List[Byte]) : (List[BDecoding], List[Byte]) = bytes match {

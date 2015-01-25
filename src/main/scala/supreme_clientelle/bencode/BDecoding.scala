@@ -8,7 +8,7 @@ import scala.util.{Failure, Success, Try}
  */
 sealed trait BDecoding
 case class BStr(is: List[Byte]) extends BDecoding {
-  override def toString = "BStr(BStrify" + is.map(_.toChar).mkString +"))"
+  override def toString = "BStr(BStrify(" + is.map(_.toChar).mkString +"))"
 }
 case class BInt(is: Int) extends BDecoding
 case class BList(is: List[BDecoding]) extends BDecoding
