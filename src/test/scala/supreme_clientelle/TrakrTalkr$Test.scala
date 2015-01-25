@@ -2,6 +2,9 @@ package supreme_clientelle
 
 import org.specs2.mutable.Specification
 
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
+
 /**
  * Created by aguestuser on 1/15/15.
  */
@@ -42,7 +45,7 @@ class TrakrTalkr$Test extends Specification {
   "#getResponses" should {
 
     "get correct response from Tracker" in {
-      res === Right("")
+      Await.result(res, Duration("1 minute")) === Right("")
     }
 
   }

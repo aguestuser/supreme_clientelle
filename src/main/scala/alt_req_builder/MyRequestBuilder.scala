@@ -83,8 +83,8 @@ class MyRequestBuilder extends RequestBuilder {
     def isRedirectOverrideSet(): Boolean = followRedirects != null
     def isUseRawUrl(): Boolean = useRawUrl
     def setUrl(url: String) = this.url = url
-    def getRawURI() = rawUri
-    def getOriginalURI() = originalUri
+    def getRawURI() = uri
+    def getOriginalURI() = uri
     def getURI() = uri
 
     def MyRequestImpl(prototype: Request) = {
@@ -210,6 +210,7 @@ class MyRequestBuilder extends RequestBuilder {
   var myrequest: MyRequestImpl = new MyRequestImpl()
   def setUrl[T](url: String) = {
     myrequest.asInstanceOf[MyRequestImpl].setUrl(url) // just set the URL like we passed it in. Skip buildUrl!
+    myrequest.uri = new URI(url)
     this
   }
 
