@@ -36,7 +36,7 @@ class MetaInfoAccessor$Test extends Specification {
   "#getPeerIdHash" should {
 
     "get correct peer id hash" in {
-      getPeerIdHash(metaInfo) === "-AG0000-%FE%D0k%CF4S%EBm%E6144%E2%86%89e%BF%07"
+      getPeerIdHash(metaInfo) === "-AG-0000-%02%DE%FE%D0k%CF4S%EBm%E6"
     }
   }
 

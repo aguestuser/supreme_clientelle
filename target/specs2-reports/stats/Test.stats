@@ -837,3 +837,52 @@
 </Test-results>
 <Test-stats timestamp="1422056375801"><stats time="18" expectations="1" failures="1" examples="1"></stats></Test-stats>
 <Test-stats timestamp="1422056632717"><stats time="20" expectations="1" successes="1" examples="1"><trend><stats time="20" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1422155990699"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:18)" id="1236607046"><stats time="276" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422155990882"><stats time="50" expectations="1" failures="1" examples="1"><trend><stats time="50" failures="1" successes="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1422156022538"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:18)" id="1236607046"><stats time="203" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422156022649"><stats time="17" expectations="1" failures="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1422156112689"><stats time="25" expectations="1" successes="1" examples="1"><trend><stats time="25" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-stats timestamp="1422156199616"><stats time="16" expectations="1" successes="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1422156896761"><stats time="19" expectations="1" successes="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422157494580"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:47)" id="-761544799"><stats pending="1" time="6" expectations="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422157494714"><stats pending="1" time="44" expectations="1" examples="1"><trend><stats pending="1" time="44" successes="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1422157536655"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:47)" id="-761544799"><stats pending="1" time="5" expectations="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422157536788"><stats pending="1" time="25" expectations="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422157595337"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:48)" id="-761544799"><stats pending="1" time="5" expectations="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422157595467"><stats pending="1" time="53" expectations="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422157611288"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:48)" id="-761544799"><stats time="561" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422157611400"><stats time="20" expectations="1" errors="1" examples="1"><trend><stats pending="-1" time="20" errors="1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1422157669537"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:48)" id="-761544799"><stats time="412" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422157669641"><stats time="16" expectations="1" errors="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422157702440"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:48)" id="-761544799"><stats time="480" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422157702567"><stats time="59" expectations="1" errors="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422157722551"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:48)" id="-761544799"><stats time="392" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422157722694"><stats time="30" expectations="1" errors="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422158211881"><result location="supreme_clientelle.bencode.MetaInfoAccessor (MetaInfoAccessor$Test.scala:38)" id="752090805"><stats time="89" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422158211986"><stats time="34" expectations="1" failures="1" examples="1"><trend><stats time="34" failures="1" errors="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1422158279081"><result location="supreme_clientelle.bencode.MetaInfoAccessor (MetaInfoAccessor$Test.scala:38)" id="752090805"><stats time="94" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422158279203"><stats time="15" expectations="1" failures="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422158353847"><result location="supreme_clientelle.bencode.MetaInfoAccessor (MetaInfoAccessor$Test.scala:38)" id="752090805"><stats time="85" expectations="1" failures="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422158353961"><stats time="21" expectations="1" failures="1" examples="1"></stats></Test-stats>
+<Test-stats timestamp="1422158379420"><stats time="21" expectations="1" successes="1" examples="1"><trend><stats time="21" failures="-1" successes="1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1422158440741"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:42)" id="-761544799"><stats time="416" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422158440836"><stats time="28" expectations="1" errors="1" examples="1"><trend><stats time="28" errors="1" successes="-1"></stats></trend></stats></Test-stats>
+<Test-results timestamp="1422158760993"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:44)" id="-761544799"><stats time="410" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422158761094"><stats time="42" expectations="1" errors="1" examples="1"></stats></Test-stats>
+<Test-results timestamp="1422158897660"><result location="supreme_clientelle.TrakrTalkr (TrakrTalkr$Test.scala:45)" id="-761544799"><stats time="391" expectations="1" errors="1" examples="1"></stats></result>
+</Test-results>
+<Test-stats timestamp="1422158897758"><stats time="52" expectations="1" errors="1" examples="1"></stats></Test-stats>

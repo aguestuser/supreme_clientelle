@@ -4,7 +4,7 @@
 		module="supreme_clientelle_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150116191407"
+		publication="20150124223407"
 	>
 		<description>
 		supreme_clientelle
@@ -34,5 +34,6 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.specs2" name="specs2-core_2.11" rev="2.4.15" conf="test->default(compile)"/>
 		<dependency org="net.databinder.dispatch" name="dispatch-core_2.11" rev="0.11.2" conf="compile->default(compile)"/>
+		<dependency org="ch.qos.logback" name="logback-classic" rev="1.1.2" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

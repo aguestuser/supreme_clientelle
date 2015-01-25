@@ -17,7 +17,7 @@ object MetaInfoAccessor {
     (hash _ andThen escape)(encode(infoMap).toArray)
   }
   def getPeerIdHash(b: BDecoding) : String = {// TODO randomize this!
-    "-AG0000-" + (hash _ andThen escape)("Austin Spencer Guest".getBytes).drop(6)
+    "-AG-0000-" + escape(hash("Austin Spencer Guest".getBytes).take(11))
   }
 
 //  def getInfoHash(b: BDecoding) : String =
