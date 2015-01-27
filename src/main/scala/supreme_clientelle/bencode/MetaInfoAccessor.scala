@@ -7,7 +7,7 @@ import BCodr._
 /**
  * Created by aguestuser on 1/20/15.
  */
-object MetaInfoAccessor {
+object MetaInfoAccessor extends ByteTools {
 
   def getAnnounceUrl(b: BDecoding) : String = lookupAndStringify(b, List(Bmk("announce")))
   def getLength(b: BDecoding) : Int = lookupAndIntify(b, List(Bmk("info"),Bmk("length")))
