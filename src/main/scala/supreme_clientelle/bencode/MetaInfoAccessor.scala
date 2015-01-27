@@ -20,12 +20,6 @@ object MetaInfoAccessor {
     "-AG-0000-" + escape(hash("Austin Spencer Guest".getBytes).take(11))
   }
 
-//  def getInfoHash(b: BDecoding) : String =
-//    hash(encode(lookup(b, List(Bmk("info"))).get).toArray).map(_.toChar).mkString
-//
-//  def getPeerIdHash(b: BDecoding) : String = // TODO randomize this!
-//    "-AG0000-" + hash("Austin Spencer Guest".getBytes).drop(6).map(_.toChar).mkString
-
   def hash(bytes: Array[Byte]) : Array[Byte] =
     java.security.MessageDigest.getInstance("SHA-1").digest(bytes)
 
