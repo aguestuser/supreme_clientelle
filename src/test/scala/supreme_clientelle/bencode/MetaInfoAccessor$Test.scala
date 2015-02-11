@@ -1,8 +1,9 @@
 package supreme_clientelle.bencode
 
 import org.specs2.mutable.Specification
-import supreme_clientelle.{Config, TorrentManager}
+import supreme_clientelle.Config
 import supreme_clientelle.bencode.MetaInfoAccessor._
+import supreme_clientelle.files.TorrentManager
 
 
 /**

@@ -1,16 +1,13 @@
-package alt_req_builder
+package supreme_clientelle.wire.tracker
 
-import java.util.ArrayList
-
-import com.ning.http.client.{FluentCaseInsensitiveStringsMap, Request, RequestBuilder}
 import java.io.{File, InputStream}
 import java.lang.StringBuilder
 import java.net.{InetAddress, MalformedURLException, URI}
-import java.util.Collections
+import java.util.{ArrayList, Collections}
 
-import com.ning.http.client.{BodyGenerator, ConnectionPoolKeyStrategy, DefaultConnectionPoolStrategy, FluentStringsMap, Part, PerRequestConfig, ProxyServer, Realm}
 import com.ning.http.client.Request.EntityWriter
 import com.ning.http.client.cookie.Cookie
+import com.ning.http.client.{BodyGenerator, ConnectionPoolKeyStrategy, DefaultConnectionPoolStrategy, FluentCaseInsensitiveStringsMap, FluentStringsMap, Part, PerRequestConfig, ProxyServer, Realm, Request, RequestBuilder}
 import com.ning.http.util.UTF8UrlEncoder
 
 /**

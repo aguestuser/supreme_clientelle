@@ -2,7 +2,10 @@ package supreme_clientelle
 
 import org.specs2.mutable.Specification
 import bencode._
+import BCodr._
 import BDecoding._
+import supreme_clientelle.files.TorrentManager
+import supreme_clientelle.wire.tracker.TrakrTalkr
 import scala.collection.immutable.ListMap
 
 /**
@@ -53,7 +56,7 @@ class TrakrTalkr$Test extends Specification {
 
       "yield correct BDecoding" in {
 
-        val r = res.map { r => bencode.OldBCodr.decode(r.toList) }
+        val r = res.map { r => decode(r) }
 
         r must be_==(
           BMap(ListMap(
@@ -63,7 +66,7 @@ class TrakrTalkr$Test extends Specification {
             BStrify("interval") -> BInt(1799), // varies -> how to test?
             BStrify("min interval") -> BInt(899), // varies -> how to test?
             BStrify("peers") ->
-              BStr(List[Byte](74,90,-8,-72,26,-31,96,126,104,-37,-10,127))
+              BStr(Array[Byte](74,90,-8,-72,26,-31,96,126,104,-37,-10,127))
           ))
         ).await
       }

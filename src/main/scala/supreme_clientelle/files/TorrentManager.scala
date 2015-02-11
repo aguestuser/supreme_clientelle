@@ -1,13 +1,20 @@
-package supreme_clientelle
+package supreme_clientelle.files
 
 import java.nio.file.{Files, Paths}
-import supreme_clientelle.TorrentStatus.TorrentStatus
-import supreme_clientelle.bencode.{ BDecoding, OldBCodr, MetaInfoAccessor }
+
+import supreme_clientelle.bencode.{BDecoding, MetaInfoAccessor, BCodr}
+import supreme_clientelle.files.TorrentStatus.TorrentStatus
+import BCodr._
+
 import scala.collection.JavaConversions._
 
+
 /**
- * Created by aguestuser on 1/19/15.
+ * Author: @aguestuser
+ * Date: 1/19/15
+ * License: GPLv2
  */
+
 object TorrentStatus extends Enumeration {
   type TorrentStatus = Value
   val started, stopped, completed = Value
@@ -43,13 +50,13 @@ object TorrentManager {
   def getDownloadPath(metaPath: String) : String = "hmmm" // TODO fix!
 
 
-  private def getMetaInfoFiles(path: String) : List[List[Byte]] = {
+  private def getMetaInfoFiles(path: String) : List[Array[Byte]] = {
    Files
      .newDirectoryStream(Paths.get(path))
      .toList
-     .map(Files.readAllBytes(_).toList)
+     .map { Files.readAllBytes }
   }
 
-  private def getMetaInfoMaps(bls: List[List[Byte]]) : List[BDecoding] = bls.map(OldBCodr.decode).toList
+  private def getMetaInfoMaps(bls: List[Array[Byte]]) : List[BDecoding] = bls.map(decode)
 
 }

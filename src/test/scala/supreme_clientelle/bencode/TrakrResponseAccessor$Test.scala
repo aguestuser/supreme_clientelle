@@ -19,8 +19,8 @@ class TrakrResponseAccessor$Test extends Specification {
 
         lazy val bPeers = BList(List(BMap(ListMap(
           BStrify("peer id") -> BStrify("WHATEVER"),
-          BStrify("host") -> BStr(List[Byte](74,90,-8,-72)),
-          BStrify("port") -> BStr(List[Byte](26,-31))
+          BStrify("host") -> BStr(Array[Byte](74,90,-8,-72)),
+          BStrify("port") -> BStr(Array[Byte](26,-31))
         ))))
 
         getPeers(bPeers) === List(
@@ -31,7 +31,7 @@ class TrakrResponseAccessor$Test extends Specification {
 
       "from a BString" in {
 
-        lazy val bPeers = BStr(List[Byte](74,90,-8,-72,26,-31,96,126,104,-37,-10,127))
+        lazy val bPeers = BStr(Array[Byte](74,90,-8,-72,26,-31,96,126,104,-37,-10,127))
 
         getPeers(bPeers) === List(
           Peer(1247475896, 6881, None),

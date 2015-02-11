@@ -15,13 +15,13 @@ class BDecoding$Test extends Specification {
 
     "#BStrify" should {
       "compose a BStr from a String" in {
-        BStrify("hello") === BStr(List[Byte](104, 101, 108, 108, 111))
+        BStrify("hello") === BStr(Array[Byte](104, 101, 108, 108, 111))
       }
     }
 
     "#stringify" should {
       "unpack a String from a BStr" in {
-        stringify(BStr(List[Byte](104, 101, 108, 108, 111))) === Success("hello")
+        stringify(BStr(Array[Byte](104, 101, 108, 108, 111))) === Success("hello")
       }
     }
 

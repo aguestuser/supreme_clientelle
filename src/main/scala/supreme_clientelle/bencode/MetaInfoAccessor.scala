@@ -1,13 +1,13 @@
 package supreme_clientelle.bencode
 
-import BDecoding._
-import OldBCodr._
+import supreme_clientelle.bencode.BDecoding._
+import supreme_clientelle.bencode.BCodr._
 
 
 /**
  * Created by aguestuser on 1/20/15.
  */
-object MetaInfoAccessor extends ByteTools {
+object MetaInfoAccessor {
 
   def getAnnounceUrl(b: BDecoding) : String = lookupAndStringify(b, List(Bmk("announce")))
   def getLength(b: BDecoding) : Int = lookupAndIntify(b, List(Bmk("info"),Bmk("length")))

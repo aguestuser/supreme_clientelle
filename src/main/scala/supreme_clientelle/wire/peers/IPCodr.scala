@@ -1,4 +1,4 @@
-package supreme_clientelle.bencode
+package supreme_clientelle.wire.peers
 
 /**
  * Created by aguestuser on 1/27/15.

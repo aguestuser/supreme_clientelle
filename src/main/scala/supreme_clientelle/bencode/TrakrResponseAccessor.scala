@@ -1,12 +1,14 @@
 package supreme_clientelle.bencode
 
+import supreme_clientelle.bytes.ByteTools._
+
 /**
  * Created by aguestuser on 1/26/15.
  */
 
 case class Peer(host: Int, port: Int, id: Option[Int])
 
-object TrakrResponseAccessor extends ByteTools {
+object TrakrResponseAccessor {
 
   def getPeers(bd: BDecoding) : List[Peer] = bd match {
 //    case BList(bl) => bl map { peerFromBMap }
@@ -20,19 +22,19 @@ object TrakrResponseAccessor extends ByteTools {
 //      lookup(bm, List(Bmk("port"))) match { case Success(BStr(b)) => IPCodr.decode(b) },
 //      Some(lookupAndIntify(bm, List(Bmk("peer id")))))
 
-  private def peersFromBytes(bs: List[Byte]) : List[Peer] =
+  private def peersFromBytes(bs: Array[Byte]): List[Peer] =
     partitionEvery(6)(bs) map { peerFromBytes }
 
-  private def partitionEvery(span: Int)(bytes: List[Byte]) : List[List[Byte]] = bytes match {
-    case Nil => List()
+  private def partitionEvery(span: Int)(bytes: Array[Byte]) : List[Array[Byte]] = bytes match {
+    case Array() => List()
     case l if l.size < span => l :: List()
     case l => l.take(span) :: partitionEvery(span)(l.drop(span))
   }
 
-  private def peerFromBytes(bs: List[Byte]) : Peer =
+  private def peerFromBytes(bs: Array[Byte]) : Peer =
     portHostify(bs) match { case(h,p) => Peer(h,p, None) }
 
-  private def portHostify(bytes: List[Byte]) : (Int, Int) =
+  private def portHostify(bytes: Array[Byte]) : (Int, Int) =
     bytes.splitAt(4) match { case (h,p) => (sum(h), sum(p)) }
 
 }

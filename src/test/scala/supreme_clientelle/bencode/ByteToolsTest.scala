@@ -1,11 +1,17 @@
 package supreme_clientelle.bencode
 
+import supreme_clientelle.bytes.ByteTools._
+
 import org.specs2.mutable.Specification
 
+
 /**
- * Created by aguestuser on 1/27/15.
+ * Author: @aguestuser
+ * Date: 1/27/15
+ * License: GPLv2
  */
-class ByteToolsTest extends Specification with ByteTools {
+
+class ByteToolsTest extends Specification {
 
   "#sum" should {
     "sum a byte array to an int" in {

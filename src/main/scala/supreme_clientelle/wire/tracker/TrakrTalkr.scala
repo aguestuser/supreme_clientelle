@@ -1,9 +1,12 @@
-package supreme_clientelle
+package supreme_clientelle.wire.tracker
 
-import dispatch._, Defaults._
+import dispatch.Defaults._
+import dispatch._
 import supreme_clientelle.bencode.MetaInfoAccessor._
 import supreme_clientelle.bencode._
-import alt_req_builder.MyRequestBuilder
+import supreme_clientelle.Config
+import supreme_clientelle.files.TorrentState
+import supreme_clientelle.wire.tracker.MyRequestBuilder
 
 /**
 * Created by aguestuser on 1/14/15.

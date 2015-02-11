@@ -4,12 +4,13 @@ import scala.collection.immutable.ListMap
 import scala.util.{Failure, Success, Try}
 
 /**
- * Created by aguestuser on 1/14/15.
+ * Author: @aguestuser
+ * Date: 1/14/15
+ * License: GPLv2
  */
+
 sealed trait BDecoding
-case class BStr(is: List[Byte]) extends BDecoding {
-  override def toString = "BStr(BStrify(" + is.map(_.toChar).mkString +"))"
-}
+case class BStr(is: Array[Byte]) extends BDecoding { override def toString = "BStr(BStrify(" + is.map(_.toChar).mkString +"))" }
 case class BInt(is: Int) extends BDecoding
 case class BList(is: List[BDecoding]) extends BDecoding
 case class BMap(is: ListMap[BStr, BDecoding]) extends BDecoding
@@ -18,10 +19,9 @@ sealed trait BKey
 case class Bmk(is: String) extends BKey
 case class Blk(is: Int) extends BKey
 
-
 object BDecoding extends BKey {
 
-  def BStrify(str: String): BStr = BStr(str.getBytes.toList)
+  def BStrify(str: String): BStr = BStr(str.getBytes)
 
   def lookupAndStringify(b: BDecoding, keys: List[BKey]) : String = stringify(lookup(b,keys).get).get
   def lookupAndIntify(b: BDecoding, keys: List[BKey]) : Int = intify(lookup(b,keys).get).get
