@@ -1,7 +1,7 @@
 package supreme_clientelle.bencode
 
 import BDecoding._
-import BCodr._
+import OldBCodr._
 
 
 /**

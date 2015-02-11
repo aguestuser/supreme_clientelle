@@ -1,90 +1,32 @@
 package supreme_clientelle.bencode
 
 import scala.collection.immutable.ListMap
+import scala.util.parsing.combinator._
+
 
 /**
- * Created by aguestuser on 1/8/15.
+ * Created by aguestuser on 2/10/15.
  */
+
+object BParser extends Parsers {
+  type Elem = Byte
+
+  def b: Parser[BDecoding] = bInt | bStr | bList | bMap
+  def bInt: Parser[BInt] = 'i'.toByte ~> digits <~'e'.toByte ^^ BInt
+  def bStr: Parser[BStr] = digits flatMap { len => ':'.toByte ~> repN(len, anyByte) ^^ BStr }
+  def bList: Parser[BList] = 'l'.toByte ~> b <~ 'e'.toByte ^^ { bs => BList(List(bs)) }
+  def bMap: Parser[BMap] = 'd'.toByte ~> rep(keyVal) <~ 'e'.toByte ^^ { kvs => BMap(listMapify(kvs))}
+
+  private def digits: Parser[Int] = rep(digit) ^^ (_.mkString.toInt)
+  private def digit: Parser[Char] = acceptIf(_.isValidInt)(_ => "not a digit") ^^ (_.toChar)
+  private def anyByte: Parser[Byte] = acceptIf(_ => true)(_ => "can't fail!")
+  private def keyVal: Parser[(BStr,BDecoding)] = bStr ~ b ^^ { case (k ~ v) => (k,v) }
+  private def listMapify(l: List[(BStr,BDecoding)]): ListMap[BStr,BDecoding] =
+    ( ListMap[BStr,BDecoding]() /: l )((acc,kv) => acc + (kv._1 -> kv._2) )
+}
 
 object BCodr {
 
-  // public methods
-  def decode(str: String) : BDecoding = decode(str.getBytes.toList)
-  def decode(bytes: List[Byte]) : BDecoding = decodeOne(bytes)._1
-  def encode(b: BDecoding) : List[Byte] = encodeOne(b)
+//  def decode(bytes: List[Byte]): BDecoding = BParser.hmm...
 
-  // helpers for #decode
-  private def decodeOne(rem: List[Byte]) : (BDecoding, List[Byte]) = rem match {
-    case 'i' :: tail => decodeInt(tail)
-    case n :: tail if n.toChar.isDigit => decodeStr(rem)
-    case 'l' :: tail =>  val (l, rest) = decodeList(tail); (BList(l), rest)
-    case 'd' :: tail => val (l, rest) = decodeMap(tail); (BMap(l), rest)
-    case bad => throw new Exception("Bencoding error starting at" + bad.take(10).map(_.toChar).mkString) }
-
-  private def decodeInt(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
-    val (intBytes, _ :: tail) = bytes.span(_.toChar != 'e')
-    (BInt(intBytes.map(_.toChar).mkString.toInt), tail) }
-
-  private def decodeStr(bytes: List[Byte]) : (BDecoding, List[Byte]) = {
-    val (len, _ :: tail) = bytes.span(_.toChar != ':')
-    val (strBytes, newTail) = tail.splitAt(len.map(_.toChar).mkString.toInt)
-    (BStr(strBytes), newTail) }
-
-  private def decodeList(bytes: List[Byte]) : (List[BDecoding], List[Byte]) = bytes match {
-    case 'e' :: tail => (List[BDecoding](), tail)
-    case _ =>
-      val (item, tail) = decodeOne(bytes)
-      val (list, newTail) = decodeList(tail)
-      (item :: list, newTail) }
-
-  private def decodeMap(bytes: List[Byte]) : (ListMap[BStr, BDecoding], List[Byte]) = bytes match {
-    case 'e' :: tail => (ListMap[BStr, BDecoding](), tail)
-    case _ =>
-      val (key: BStr, tail) = decodeOne(bytes)
-      val (value: BDecoding, newTail) = decodeOne(tail)
-      val (map, newestTail) = decodeMap(newTail)
-      (ListMap(Tuple2(key, value)) ++ map, newestTail) }
-
-  private def encodeOne(b: BDecoding) = b match {
-    case BInt(i) => encodeInt(i)
-    case BStr(bytes) => encodeStr(bytes)
-    case BList(bl) => encodeList(bl)
-    case BMap(bm) => encodeMap(bm)
-  }
-
-  // helpers for #encode
-
-  private def encodeInt(i: Int) : List[Byte] =
-    'i'.toByte :: (i.toString.getBytes.toList :+ 'e'.toByte)
-
-  private def encodeStr(bytes: List[Byte]) : List[Byte] =
-    bytes.size.toString.getBytes.toList ++ (':'.toByte :: bytes)
-
-  private def encodeList(bl: List[BDecoding]) : List[Byte] =
-    'l'.toByte :: (bl.flatMap(encodeOne) :+ 'e'.toByte)
-
-  private def encodeMap(bm: Map[BStr,BDecoding]) : List[Byte] =
-    'd'.toByte :: (
-      (bm.keys.toList.map(encodeOne)
-        zip bm.values.toList.map(encodeOne))
-        .flatMap({ case (x,y) => x ++ y }
-      ) :+ 'e'.toByte
-    )
 }
-
-// question: how to sha-1 encode a byte array?
-
-/*answer:
-* import java.security.MessageDigest
-* val ba = someByteList.toArray
-* val md = MessageDigest.getInstance("SHA-1")
-* val bhash:List[Byte] = md.digest(ba).toList
-* */
-
-// question: how to read a file into a byte array?
-
-/* answer:
-* import java.nio.file.{Files, Paths}
-* val byteList = Files.readAllBytes(Paths.get("path/to/file")).toList
-* */
-

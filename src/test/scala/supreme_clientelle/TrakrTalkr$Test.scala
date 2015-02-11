@@ -53,7 +53,7 @@ class TrakrTalkr$Test extends Specification {
 
       "yield correct BDecoding" in {
 
-        val r = res.map { r => bencode.BCodr.decode(r.toList) }
+        val r = res.map { r => bencode.OldBCodr.decode(r.toList) }
 
         r must be_==(
           BMap(ListMap(

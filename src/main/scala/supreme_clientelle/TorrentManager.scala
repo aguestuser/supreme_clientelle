@@ -2,7 +2,7 @@ package supreme_clientelle
 
 import java.nio.file.{Files, Paths}
 import supreme_clientelle.TorrentStatus.TorrentStatus
-import supreme_clientelle.bencode.{ BDecoding, BCodr, MetaInfoAccessor }
+import supreme_clientelle.bencode.{ BDecoding, OldBCodr, MetaInfoAccessor }
 import scala.collection.JavaConversions._
 
 /**
@@ -50,6 +50,6 @@ object TorrentManager {
      .map(Files.readAllBytes(_).toList)
   }
 
-  private def getMetaInfoMaps(bls: List[List[Byte]]) : List[BDecoding] = bls.map(BCodr.decode).toList
+  private def getMetaInfoMaps(bls: List[List[Byte]]) : List[BDecoding] = bls.map(OldBCodr.decode).toList
 
 }

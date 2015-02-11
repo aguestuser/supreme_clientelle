@@ -9,6 +9,12 @@ libraryDependencies ++= Seq(
   "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
 )
 
+// Parser Combinators
+
+libraryDependencies ++= Seq(
+  "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.3"
+)
+
 // specs2 dependencies:
 
 libraryDependencies ++= Seq(

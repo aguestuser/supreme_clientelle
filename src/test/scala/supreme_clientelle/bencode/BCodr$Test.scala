@@ -1,7 +1,7 @@
 package supreme_clientelle.bencode
 
 import org.specs2.mutable.Specification
-import supreme_clientelle.bencode.BCodr._
+import supreme_clientelle.bencode.OldBCodr._
 import supreme_clientelle.bencode.BDecoding._
 
 import scala.collection.immutable.ListMap
