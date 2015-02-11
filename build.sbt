@@ -4,12 +4,15 @@ version := "1.0"
 
 scalaVersion := "2.11.4"
 
-libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2-core" % "2.4.15" % "test"
-)
 
 libraryDependencies ++= Seq(
   "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+)
+
+// specs2 dependencies:
+
+libraryDependencies ++= Seq(
+  "org.specs2" %% "specs2-core" % "2.4.15" % "test"
 )
 
 libraryDependencies ++= Seq(
