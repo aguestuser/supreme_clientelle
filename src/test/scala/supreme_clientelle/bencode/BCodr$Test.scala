@@ -15,7 +15,7 @@ import scala.collection.immutable.ListMap
 
 class BCodr$Test extends Specification {
   
-  "BCodr.decode" should {
+  "BCodr" should {
 
     "correctly decode INTS" in {
 
@@ -91,9 +91,6 @@ class BCodr$Test extends Specification {
         decode("de") === BMap(ListMap[BStr,BDecoding]())
       }
     }
-  }
-
-  "BCodr.encode" should {
 
     "correctly encode INTS" in {
 
@@ -105,7 +102,7 @@ class BCodr$Test extends Specification {
       }
     }
     "correctly encode STRINGS" in {
-      
+
       "simple string" in {
         encode(BStrify("foo")) === byteVector("3:foo")
       }
@@ -121,7 +118,7 @@ class BCodr$Test extends Specification {
       }
     }
     "correctly encode LISTS" in  {
-      
+
       "simple list" in {
         encode(BList(List(BInt(2), BStrify("spam"), BStrify("egg")))
         ) === byteVector("li2e4:spam3:egge")
@@ -136,7 +133,7 @@ class BCodr$Test extends Specification {
       }
       "empty list" in {
         encode(BList(List())) === byteVector("le")
-      }      
+      }
     }
     "correctly encode MAPS" in {
 
@@ -148,6 +145,7 @@ class BCodr$Test extends Specification {
           BStrify("num") -> BInt(3)))
         ) === byteVector("d3:cow3:moo4:spam4:eggs3:numi3ee")
       }
+
       "map with nested list" in {
 
         encode(BMap(ListMap(
@@ -155,9 +153,10 @@ class BCodr$Test extends Specification {
             BStr(byteVector("a")), BStr(byteVector("b"))))))
         ) === byteVector("d4:spaml1:a1:bee")
       }
+
       "map with nested map" in {
 
-        encode(
+        encode {
           BMap(ListMap(
             BStr(byteVector("publisher")) -> BStr(byteVector("bob")),
             BStr(byteVector("publisher-details")) ->
@@ -166,15 +165,13 @@ class BCodr$Test extends Specification {
                 BStr(byteVector("publisher.location")) -> BStr(byteVector("home")),
                 BStr(byteVector("isbns")) ->
                   BList(List(BInt(1), BInt(2), BInt(3)))))))
-        ) === ("d9:publisher3:bob17:publisher-details" +
+        } === byteVector("d9:publisher3:bob17:publisher-details" +
           "d17:publisher-webpage15:www.example.com18:publisher.location4:home5:isbns" +
-          "li1ei2ei3eeee").getBytes
+          "li1ei2ei3eeee")
       }
       "empty map" in {
-
         encode(BMap(ListMap[BStr,BDecoding]())) === byteVector("de")
       }
     }
   }
-
 }
