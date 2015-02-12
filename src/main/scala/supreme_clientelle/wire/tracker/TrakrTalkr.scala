@@ -2,11 +2,10 @@ package supreme_clientelle.wire.tracker
 
 import dispatch.Defaults._
 import dispatch._
+import supreme_clientelle.Config
 import supreme_clientelle.bencode.MetaInfoAccessor._
 import supreme_clientelle.bencode._
-import supreme_clientelle.Config
 import supreme_clientelle.files.TorrentState
-import supreme_clientelle.wire.tracker.MyRequestBuilder
 
 /**
 * Created by aguestuser on 1/14/15.
@@ -22,7 +21,9 @@ object TrakrTalkr {
     rb.setUrl(formatRequest(_url, params)).GET
   }
 
-  def getResponse(req: Req) : Future[Array[Byte]] = Http(req OK as.Bytes)
+  def getResponse(req: Req) : Future[Vector[Byte]] =
+    Http(req OK as.Bytes) flatMap { r =>
+      Future successful { r.toVector } }
 
   private def getPars(b: BDecoding, state: TorrentState, cfg: Config) = {
     List[(String,String)](

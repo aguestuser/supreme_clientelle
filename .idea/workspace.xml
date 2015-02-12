@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b2a054-639e-42ae-94b2-470ca1543d28" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/alt_req_builder/MyRequestBuilder.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/MyRequestBuilder.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/TorrentManager.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/files/TorrentManager.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/TrakrTalkr.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/TrakrTalkr.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/ByteTools.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/IPCodr.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/peers/IPCodr.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BCodr$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BCodr$Test.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BCodr.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BCodr.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BDecoding$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BDecoding$Test.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BDecoding.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BDecoding.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/ByteToolsTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/ByteToolsTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/Main.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/MetaInfoAccessor$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/MetaInfoAccessor$Test.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/MetaInfoAccessor.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/MetaInfoAccessor.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/OldBCodr.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/OldBCodr.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/files/TorrentManager.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/files/TorrentManager.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/TrakrResponseAccessor$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/TrakrResponseAccessor$Test.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/TrakrResponseAccessor.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/TrakrResponseAccessor.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/TrakrTalkr$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/supreme_clientelle/TrakrTalkr$Test.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/TrakrTalkr.scala" afterPath="$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/TrakrTalkr.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="supreme_clientelle.iws" />
@@ -46,16 +42,16 @@
     <favorites_list name="supreme_clientelle" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4534384">
+    <splitter split-orientation="horizontal" split-proportion="0.63896847">
       <split-first>
         <leaf>
           <file leaf-file-name="TrakrTalkr.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/TrakrTalkr.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="720">
-                  <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="795">
+                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding>
-                    <marker date="1423682035000" expanded="false" signature="41:207" placeholder="..." />
+                    <element signature="e#41#67#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -64,10 +60,10 @@
           <file leaf-file-name="BCodr.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BCodr.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.81609195" vertical-offset="200" max-vertical-offset="1200">
-                  <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+                <state vertical-scroll-proportion="0.35629454" vertical-offset="345" max-vertical-offset="1275">
+                  <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding>
-                    <element signature="e#36#78#0" expanded="true" />
+                    <element signature="e#36#90#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -86,9 +82,11 @@
           <file leaf-file-name="MetaInfoAccessor.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/MetaInfoAccessor.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-                  <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-                  <folding />
+                <state vertical-scroll-proportion="-2.6785715" vertical-offset="0" max-vertical-offset="405">
+                  <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#36#77#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -96,8 +94,8 @@
           <file leaf-file-name="TrakrResponseAccessor.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/TrakrResponseAccessor.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="690">
-                  <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+                <state vertical-scroll-proportion="-4.482143" vertical-offset="139" max-vertical-offset="690">
+                  <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -120,8 +118,8 @@
           <file leaf-file-name="TrakrResponseAccessor$Test.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/TrakrResponseAccessor$Test.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="675">
-                  <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+                <state vertical-scroll-proportion="-5.553571" vertical-offset="64" max-vertical-offset="675">
+                  <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -130,8 +128,8 @@
           <file leaf-file-name="TrakrTalkr$Test.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/TrakrTalkr$Test.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
-                  <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+                <state vertical-scroll-proportion="-2.142857" vertical-offset="75" max-vertical-offset="1290">
+                  <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
                   <folding>
                     <element signature="e#28#67#0" expanded="true" />
                   </folding>
@@ -139,22 +137,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="OldBCodr.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/OldBCodr.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-                  <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="BDecoding.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BDecoding.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-                  <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-                  <folding />
+                <state vertical-scroll-proportion="-0.53571427" vertical-offset="0" max-vertical-offset="1230">
+                  <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+                  <folding>
+                    <element signature="e#81#122#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -162,8 +152,8 @@
           <file leaf-file-name="ByteTools.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-                  <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+                <state vertical-scroll-proportion="-2.607143" vertical-offset="244" max-vertical-offset="855">
+                  <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -172,9 +162,11 @@
           <file leaf-file-name="MetaInfoAccessor$Test.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/MetaInfoAccessor$Test.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
-                  <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="960">
+                  <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#36#75#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -182,8 +174,8 @@
           <file leaf-file-name="BCodr$Test.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BCodr$Test.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4045977" vertical-offset="229" max-vertical-offset="2745">
-                  <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.37292162" vertical-offset="533" max-vertical-offset="2790">
+                  <caret line="46" column="13" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="13" />
                   <folding>
                     <element signature="e#36#75#0" expanded="true" />
                   </folding>
@@ -194,8 +186,8 @@
           <file leaf-file-name="ByteToolsTest.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/ByteToolsTest.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-                  <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+                <state vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="480">
+                  <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding>
                     <element signature="e#36#79#0" expanded="true" />
                   </folding>
@@ -206,8 +198,8 @@
           <file leaf-file-name="BDecoding$Test.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BDecoding$Test.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2400">
-                  <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+                <state vertical-scroll-proportion="-2.4107144" vertical-offset="0" max-vertical-offset="2400">
+                  <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -216,11 +208,21 @@
           <file leaf-file-name="TorrentManager.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/files/TorrentManager.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1020">
-                  <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+                <state vertical-scroll-proportion="-6.767857" vertical-offset="476" max-vertical-offset="1005">
+                  <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
                   <folding>
                     <element signature="e#34#69#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MyRequestBuilder.scala" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/MyRequestBuilder.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="3465">
+                  <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -268,27 +270,28 @@
         <option value="$PROJECT_DIR$/src/test/scala/alt_req_builder/MyRequestBuilder.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/alt_req_builder/MyRequestBuilder.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/alt_req_builder/alt_req_builder/MyRequestBuilder.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/MetaInfoAccessor$Test.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/alt_req_builder/MyRequestBuilder.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/PeerListAccessor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/IPCodr.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/Config.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/TrakrTalkr.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BDecoding.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/ByteTools.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/byte_tools/ByteTools.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/TrakrResponseAccessor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/OldBCodr.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/MetaInfoAccessor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/TrakrResponseAccessor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/TrakrTalkr.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BDecoding$Test.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/files/TorrentManager.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/TrakrTalkr$Test.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BDecoding$Test.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/ByteToolsTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/MetaInfoAccessor$Test.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/TrakrResponseAccessor$Test.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BCodr.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/MetaInfoAccessor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BDecoding.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BCodr$Test.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BCodr.scala" />
       </list>
     </option>
   </component>
@@ -382,36 +385,6 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supreme_clientelle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bencode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supreme_clientelle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supreme_clientelle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -437,40 +410,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="supreme_clientelle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supreme_clientelle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supreme_clientelle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supreme_clientelle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TorrentManager.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -559,7 +498,7 @@
       <recent name="supreme_clientelle.bencode" />
     </key>
   </component>
-  <component name="RunManager" selected="Specs2.supreme_clientelle.bencode.BCodr$Test::simple string">
+  <component name="RunManager" selected="Specs2.supreme_clientelle.bencode.BCodr$Test::simple list">
     <configuration default="false" name="supreme_clientelle.bencode.BCodr$Test::a positive int" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
@@ -596,42 +535,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="supreme_clientelle.bencode.BCodr$Test::zero" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="supreme_clientelle" />
-      <setting name="path" value="supreme_clientelle.bencode.BCodr$Test" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value=" -Dspecs2.ex=&quot;zero&quot;" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="zero" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="supreme_clientelle.bencode.BCodr$Test::a negative int" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="supreme_clientelle" />
-      <setting name="path" value="supreme_clientelle.bencode.BCodr$Test" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value=" -Dspecs2.ex=&quot;a negative int&quot;" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="a negative int" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="supreme_clientelle.bencode.BCodr$Test::simple string" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
@@ -643,6 +546,42 @@
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="testName" value="simple string" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="supreme_clientelle.bencode.BCodr$Test::simple map" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="supreme_clientelle" />
+      <setting name="path" value="supreme_clientelle.bencode.BCodr$Test" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value=" -Dspecs2.ex=&quot;simple map&quot;" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="simple map" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="supreme_clientelle.bencode.BCodr$Test::simple list" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="supreme_clientelle" />
+      <setting name="path" value="supreme_clientelle.bencode.BCodr$Test" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value=" -Dspecs2.ex=&quot;simple list&quot;" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="simple list" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
@@ -886,17 +825,17 @@
       <item index="0" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.TrakrTalkr$Test::get correct response from Tracker" />
       <item index="1" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::a positive int" />
       <item index="2" class="java.lang.String" itemvalue="Specs2.BCodr$Test" />
-      <item index="3" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::zero" />
-      <item index="4" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::a negative int" />
-      <item index="5" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple string" />
+      <item index="3" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple string" />
+      <item index="4" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple map" />
+      <item index="5" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple list" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple string" />
-        <item index="1" class="java.lang.String" itemvalue="Specs2.BCodr$Test" />
-        <item index="2" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::a negative int" />
-        <item index="3" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::a positive int" />
-        <item index="4" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::zero" />
+        <item index="0" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple list" />
+        <item index="1" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple map" />
+        <item index="2" class="java.lang.String" itemvalue="Specs2.BCodr$Test" />
+        <item index="3" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::simple string" />
+        <item index="4" class="java.lang.String" itemvalue="Specs2.supreme_clientelle.bencode.BCodr$Test::a positive int" />
       </list>
     </recent_temporary>
   </component>
@@ -978,12 +917,18 @@
       <option name="project" value="LOCAL" />
       <updated>1423640426611</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor BCodr to use Parser combinators, reorganize file structure">
+      <created>1423691619354</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1423691619354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -991,7 +936,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23493975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1006,7 +951,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20057307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3746988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45903614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1016,25 +961,25 @@
     <layout-to-restore>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68915665" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33493975" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15329513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36506024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20057307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3746988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26385543" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23493975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20057307" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2614458" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1064,7 +1009,8 @@
     <MESSAGE value=" Refactor TrakrResponseAccessor#getPeers, sketch IPCodr" />
     <MESSAGE value="Hmm..." />
     <MESSAGE value="Add BParser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add BParser" />
+    <MESSAGE value="Refactor BCodr to use Parser combinators, reorganize file structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor BCodr to use Parser combinators, reorganize file structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1336,42 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/MyRequestBuilder.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="3465">
-          <caret line="233" column="1" selection-start-line="233" selection-start-column="1" selection-end-line="233" selection-end-column="1" />
-          <folding>
-            <marker date="1423682035000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/TrakrTalkr.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="720">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <marker date="1423682035000" expanded="false" signature="41:207" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BDecoding.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/TrakrResponseAccessor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="690">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/OldBCodr.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
@@ -1380,90 +1290,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/TrakrResponseAccessor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state vertical-scroll-proportion="-4.482143" vertical-offset="139" max-vertical-offset="690">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/files/TorrentManager.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/MyRequestBuilder.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1020">
-          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-          <folding>
-            <element signature="e#34#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/MetaInfoAccessor$Test.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="900">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="3465">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/TrakrTalkr$Test.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/wire/tracker/TrakrTalkr.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
-          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="795">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="e#28#67#0" expanded="true" />
+            <element signature="e#41#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BDecoding$Test.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2400">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state vertical-scroll-proportion="-2.4107144" vertical-offset="0" max-vertical-offset="2400">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/files/TorrentManager.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.767857" vertical-offset="476" max-vertical-offset="1005">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#34#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/TrakrTalkr$Test.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.142857" vertical-offset="75" max-vertical-offset="1290">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="e#28#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/ByteToolsTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="480">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#36#79#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/MetaInfoAccessor$Test.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="960">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <element signature="e#36#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/TrakrResponseAccessor$Test.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="675">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        <state vertical-scroll-proportion="-5.553571" vertical-offset="64" max-vertical-offset="675">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/MetaInfoAccessor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        <state vertical-scroll-proportion="-2.6785715" vertical-offset="0" max-vertical-offset="405">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#36#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BDecoding.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.53571427" vertical-offset="0" max-vertical-offset="1230">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+          <folding>
+            <element signature="e#81#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bytes/ByteTools.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.607143" vertical-offset="244" max-vertical-offset="855">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/supreme_clientelle/bencode/BCodr.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81609195" vertical-offset="200" max-vertical-offset="1200">
-          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.35629454" vertical-offset="345" max-vertical-offset="1275">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#36#78#0" expanded="true" />
+            <element signature="e#36#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/supreme_clientelle/bencode/BCodr$Test.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4045977" vertical-offset="229" max-vertical-offset="2745">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.37292162" vertical-offset="533" max-vertical-offset="2790">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="13" />
           <folding>
             <element signature="e#36#75#0" expanded="true" />
           </folding>

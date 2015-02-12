@@ -50,13 +50,12 @@ object TorrentManager {
   def getDownloadPath(metaPath: String) : String = "hmmm" // TODO fix!
 
 
-  private def getMetaInfoFiles(path: String) : List[Array[Byte]] = {
-   Files
+  private def getMetaInfoFiles(path: String) : List[Vector[Byte]] =
+    Files
      .newDirectoryStream(Paths.get(path))
      .toList
-     .map { Files.readAllBytes }
-  }
+     .map { Files.readAllBytes(_).toVector }
 
-  private def getMetaInfoMaps(bls: List[Array[Byte]]) : List[BDecoding] = bls.map(decode)
+  private def getMetaInfoMaps(bls: List[Vector[Byte]]) : List[BDecoding] = bls.map(decode)
 
 }

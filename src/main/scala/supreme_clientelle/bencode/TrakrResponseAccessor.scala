@@ -22,19 +22,19 @@ object TrakrResponseAccessor {
 //      lookup(bm, List(Bmk("port"))) match { case Success(BStr(b)) => IPCodr.decode(b) },
 //      Some(lookupAndIntify(bm, List(Bmk("peer id")))))
 
-  private def peersFromBytes(bs: Array[Byte]): List[Peer] =
+  private def peersFromBytes(bs: Vector[Byte]): List[Peer] =
     partitionEvery(6)(bs) map { peerFromBytes }
 
-  private def partitionEvery(span: Int)(bytes: Array[Byte]) : List[Array[Byte]] = bytes match {
-    case Array() => List()
+  private def partitionEvery(span: Int)(bytes: Vector[Byte]) : List[Vector[Byte]] = bytes match {
+    case Vector() => List()
     case l if l.size < span => l :: List()
     case l => l.take(span) :: partitionEvery(span)(l.drop(span))
   }
 
-  private def peerFromBytes(bs: Array[Byte]) : Peer =
+  private def peerFromBytes(bs: Vector[Byte]) : Peer =
     portHostify(bs) match { case(h,p) => Peer(h,p, None) }
 
-  private def portHostify(bytes: Array[Byte]) : (Int, Int) =
+  private def portHostify(bytes: Vector[Byte]) : (Int, Int) =
     bytes.splitAt(4) match { case (h,p) => (sum(h), sum(p)) }
 
 }

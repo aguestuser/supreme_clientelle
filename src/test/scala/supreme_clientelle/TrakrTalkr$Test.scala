@@ -9,8 +9,11 @@ import supreme_clientelle.wire.tracker.TrakrTalkr
 import scala.collection.immutable.ListMap
 
 /**
- * Created by aguestuser on 1/15/15.
+ * Author: aguestuser
+ * Date: 1/15/15
+ * License: GPLv2
  */
+
 class TrakrTalkr$Test extends Specification {
 
   lazy val cfg: Config = new Config
@@ -44,7 +47,7 @@ class TrakrTalkr$Test extends Specification {
 
       "get correct Byte Array response from Tracker" in {
 
-        res must be_==(Array[Byte](100, 56, 58, 99, 111, 109, 112, 108, 101, 116, 101,
+        res must be_==(Vector[Byte](100, 56, 58, 99, 111, 109, 112, 108, 101, 116, 101,
           105, 49, 101, 49, 48, 58, 100, 111, 119, 110, 108, 111, 97, 100, 101,
           100, 105, 49, 101, 49, 48, 58, 105, 110, 99, 111, 109, 112, 108, 101,
           116, 101, 105, 49, 101, 56, 58, 105, 110, 116, 101, 114, 118, 97, 108,
@@ -66,7 +69,7 @@ class TrakrTalkr$Test extends Specification {
             BStrify("interval") -> BInt(1799), // varies -> how to test?
             BStrify("min interval") -> BInt(899), // varies -> how to test?
             BStrify("peers") ->
-              BStr(Array[Byte](74,90,-8,-72,26,-31,96,126,104,-37,-10,127))
+              BStr(Vector[Byte](74,90,-8,-72,26,-31,96,126,104,-37,-10,127))
           ))
         ).await
       }

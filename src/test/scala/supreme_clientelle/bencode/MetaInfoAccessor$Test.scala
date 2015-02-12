@@ -4,6 +4,8 @@ import org.specs2.mutable.Specification
 import supreme_clientelle.Config
 import supreme_clientelle.bencode.MetaInfoAccessor._
 import supreme_clientelle.files.TorrentManager
+import supreme_clientelle.bytes.ByteTools._
+
 
 
 /**
@@ -42,10 +44,10 @@ class MetaInfoAccessor$Test extends Specification {
   }
 
   "#escape" should {
-    lazy val ba = Array[Byte](18, 52, 86, 120, -102, -68, -34, -15, 35, 69, 103, -119, -85, -51, -17, 18, 52, 86, 120, -102)
+    lazy val ba = Vector[Byte](18, 52, 86, 120, -102, -68, -34, -15, 35, 69, 103, -119, -85, -51, -17, 18, 52, 86, 120, -102)
     //ie: \x12\x34\x56\x78\x9a\xbc\xde\xf1\x23\x45\x67\x89\xab\xcd\xef\x12\x34\x56\x78\x9a
 
-    "escape a byte array with non-character bytes" in {
+    "escape a byte vector with non-character bytes" in {
       escape(ba) === "%124Vx%9A%BC%DE%F1%23Eg%89%AB%CD%EF%124Vx%9A"
     }
 
