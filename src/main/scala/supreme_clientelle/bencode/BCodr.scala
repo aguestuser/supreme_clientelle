@@ -36,7 +36,7 @@ object BDecode extends Parsers {
 //  private def digits: Parser[Int] = rep(digit) ^^ { case(ds) => ds.mkString.toInt }
 
   private def digits: Parser[Int] = neg.? ~ rep(digit) ^^ { case(neg ~ digits) =>
-    println("YO!" + digits)
+    //TODO why does digits return an empty list here?
     val num = digits.mkString.toInt; neg match { case None => num; case Some(_) => 0 - num} }
 //  private def digit: Parser[Char] = acceptIf(('0'.toByte to '9'.toByte) contains _ )(_ => "not a digit") ^^ (_.toChar)
   private def digit: Parser[Char] = acceptIf(Set[Byte]('0','1','2','3','4','5','6','7','8','9').contains)(_ => "not a digit") ^^ { _.toChar }
