@@ -34,7 +34,7 @@ object BDecode extends Parsers {
   private def digit: Parser[Char] = acceptIf { DIGITS.contains } { x => s"$x is not a digit" } ^^ { _.toChar }
   private def anyByte: Parser[Byte] = acceptIf(_ => true)(_ => "can't fail!")
   private def keyVal: Parser[(BStr,BDecoding)] = bStr ~ b ^^ { case (k ~ v) => (k,v) }
-  private def listMapify(l: List[(BStr,BDecoding)]) = (ListMap[BStr,BDecoding]() /: l )((acc,kv) => acc + (kv._1 -> kv._2) )
+  private def listMapify(l: List[(BStr,BDecoding)]) = (ListMap[BStr,BDecoding]() /: l )(_+_)
 }
 
 object BEncode {

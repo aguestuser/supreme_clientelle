@@ -6,6 +6,7 @@ import supreme_clientelle.Config
 import supreme_clientelle.bencode.MetaInfoAccessor._
 import supreme_clientelle.bencode._
 import supreme_clientelle.files.TorrentState
+import BCodr._
 
 /**
 * Created by aguestuser on 1/14/15.
@@ -21,9 +22,12 @@ object TrakrTalkr {
     rb.setUrl(formatRequest(_url, params)).GET
   }
 
-  def getResponse(req: Req) : Future[Vector[Byte]] =
+  def getResponses(reqs: List[Req]): List[Future[BDecoding]] =
+    reqs map { getResponse }
+
+  def getResponse(req: Req) : Future[BDecoding] =
     Http(req OK as.Bytes) flatMap { r =>
-      Future successful { r.toVector } }
+      Future successful { decode(r.toVector) } }
 
   private def getPars(b: BDecoding, state: TorrentState, cfg: Config) = {
     List[(String,String)](

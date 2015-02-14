@@ -1,7 +1,10 @@
 package supreme_clientelle
 
-import supreme_clientelle.files.TorrentManager
-import supreme_clientelle.wire.tracker.TrakrTalkr
+import supreme_clientelle.bencode.BDecoding
+import supreme_clientelle.files.TorrentManager._
+import supreme_clientelle.wire.tracker.TrakrTalkr._
+
+import scala.concurrent.Future
 
 /**
  * Created by aguestuser on 1/14/15.
@@ -10,9 +13,15 @@ import supreme_clientelle.wire.tracker.TrakrTalkr
 object Main extends App {
 
   val cfg: Config = new Config
-  val metaInfos = TorrentManager.getMetaInfos(cfg.torrentQueue)
-  val states = TorrentManager.getTorrentStates(metaInfos)
+  val metaInfos = getMetaInfos(cfg.torrentQueue)
+  val states = getTorrentStates(metaInfos)
 
-  val trakrRequests = TrakrTalkr.buildRequests(metaInfos, states, cfg)
+  val peerLists: List[Future[BDecoding]] =
+    getResponses(buildRequests(metaInfos, states, cfg))
+
+
+
+
+
 
 }

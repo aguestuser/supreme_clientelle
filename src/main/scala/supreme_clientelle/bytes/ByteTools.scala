@@ -21,15 +21,12 @@ object ByteTools {
 
   def hash(bytes: Vector[Byte]) : Vector[Byte] =
     java.security.MessageDigest.getInstance("SHA-1").digest(bytes.toArray).toVector
-
   def escape(bytes: Vector[Byte]) : String =
     bytes.map(charifyOrHexify).map(doubleDigitize).mkString
 
   private def charifyOrHexify(b: Byte) : String =
     if (CHARS.contains(b)) b.toChar.toString else hexify(b)
-
   private def hexify(b: Byte) : String = "%" + (b & 0xff).toHexString.toUpperCase
-
   private def doubleDigitize(hex: String) : String =
     """(%)([A-Z|0-9])(%|$)""".r.replaceAllIn(hex, m => (m group 1) + "0" + (m group 2) )
 

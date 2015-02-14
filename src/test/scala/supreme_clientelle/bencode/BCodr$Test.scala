@@ -19,10 +19,17 @@ class BCodr$Test extends Specification {
 
     "correctly decode INTS" in {
 
-      "a positive int" in { decode("i123e") === BInt(123)}
-      "a negative int" in { decode("i-123e") === BInt(-123)}
-      "zero" in { decode("i0e") === BInt(0)}
-      "int with every digit and a leading 0" in { decode("i0123456789e") === BInt(123456789)}
+      "a positive int" in {
+        decode("i123e") === BInt(123)
+      }
+      "a negative int" in {
+        decode("i-123e") === BInt(-123)
+      }
+      "zero" in {
+        decode("i0e") === BInt(0)
+      }
+      "int with every digit and a leading 0" in {
+        decode("i0123456789e") === BInt(123456789)}
     }
 
     "correctly decode STRINGS" in {
